@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import axios from 'axios';
 // import components
 import LandingPage from './LandingPage';
+import TravelPage from './components/TravelPage';
 
 // syntax to import component
 // import Header from './components/Header';
@@ -57,10 +58,10 @@ function App() {
 
         <Routes>
           <Route path='/' element={<LandingPage />}/>
-          <Route path='/travel' element={<TravelPage />}/>
-          <Route path='/about' element={<AboutPage />}/>
+          <Route path='/travel/*' element={<TravelPage />}/>
+          {/* <Route path='/about' element={<AboutPage />}/>
           <Route path='/contact' element={<ContactPage />}/>
-          <Route path='/ourclients' element={<OurClients />}/>
+          <Route path='/ourclients' element={<OurClients />}/> */}
         </Routes>
           
       </div>
