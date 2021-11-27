@@ -1,0 +1,19 @@
+footer {
+    color: white;
+    background-color: #181818;
+    opacity: 90%;
+    font-family: 'montserrat', sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+footer a {
+    color: white;
+}
+
+footer a:focus {
+    border: 2px solid #dd361c;
+}
+
+footer a:hover {
+    color: #dd361c;
+}
