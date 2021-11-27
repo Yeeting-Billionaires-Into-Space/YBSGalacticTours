@@ -1,9 +1,11 @@
 // App.js
 
-// imports
+// imports NPM modules 
 import { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import axios from 'axios';
+// import components
+import LandingPage from './LandingPage';
 
 // syntax to import component
 // import Header from './components/Header';
@@ -51,11 +53,18 @@ function App() {
 
   return (
     <Router>
+      <div className="wrapper">
 
+        <Routes>
+          <Route path='/' element={<LandingPage />}/>
+          <Route path='/travel' element={<TravelPage />}/>
+          <Route path='/about' element={<AboutPage />}/>
+          <Route path='/contact' element={<ContactPage />}/>
+          <Route path='/ourclients' element={<OurClients />}/>
+        </Routes>
+          
+      </div>
 
-      <Routes>
-
-      </Routes>
     </Router>
   );
 }
