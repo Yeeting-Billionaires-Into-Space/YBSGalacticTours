@@ -1,13 +1,14 @@
 // Header
+import './style.css';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+
 
 function Header() {
 
   return (
-      <header>
-      <div className="logo">
-        <img src="" alt="the logo for YBS" />
+    <header className='wrapper'>
+      <div className='logo'>
+        <img src={'./assets/YBSLogo.png'} alt='the logo for YBS' />
       </div>
       <nav>
         <ul>
@@ -17,7 +18,7 @@ function Header() {
           <li className='navClients'><Link to={'/ourclients'}>Our Clients</Link></li>
         </ul>
       </nav>
-      </header>
+    </header>
   )
 }
 
