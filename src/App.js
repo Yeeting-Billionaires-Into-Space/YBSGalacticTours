@@ -4,6 +4,8 @@
 import { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import axios from 'axios';
+import Button from './components/Button';
+import Footer from './components/Footer'
 
 // syntax to import component
 import Header from './components/Header';
@@ -56,12 +58,13 @@ function App() {
   return (
     <Router>
 
-
       <Routes>
+    
         <Route path='/travel' element={<TravelPage />}/>
         <Route path='/about' element={<AboutPage />}/>
         <Route path='/contact' element={<ContactPage/>}/>
         <Route path='/ourclients' element={<OurClients />}/>
+          
       </Routes>
 
     </Router>
