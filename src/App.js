@@ -62,7 +62,7 @@ function App() {
 
   return (
     <Router>
-      <div className="wrapper">
+      <div className="">
 
         <Routes>
           <Route path='/' element={<LandingPage />}/>
