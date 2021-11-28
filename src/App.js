@@ -38,23 +38,6 @@ function App() {
         const asteroidResponse = response.data.near_earth_objects['2021-12-10'];
         // console.log(asteroidResponse)
         })
-
-
-
-
-
-      // // api call: NASA Image and Video Library
-      // axios({
-      //   //                                      👇 test nasa id
-      //   url: 'https://images-api.nasa.gov/asset/PIA01383',
-      //   method: 'GET',
-      //   responseType: 'json'
-      // })
-      //   .then((response) => {
-      //     // gets image url for specified image (by nasa id)
-      //     const imagePath = response.data.collection.items[0].href;
-      //     console.log(imagePath, 'image path');
-      //   })
   }, [])
 
 
@@ -70,9 +53,8 @@ function App() {
           <Route path='/travel/*' element={<TravelPage />}/>
           <Route path='/about' element={<AboutPage />}/>
           <Route path='/contact' element={<ContactPage />}/>
-
-          <Route path='/ourclients' element={<OurClients />}/> */}
-          <Route path="travel/:planetID" element={<Gallery />} />
+          <Route path='/ourclients' element={<OurClients />}/>
+          <Route path="/travel/:planetID" element={<Gallery />} />
         </Routes>
 
 
