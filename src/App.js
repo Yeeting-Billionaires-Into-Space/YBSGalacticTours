@@ -4,12 +4,20 @@
 import { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import axios from 'axios';
+
 // import components
 import LandingPage from './LandingPage';
 import TravelPage from './components/TravelPage';
+import Button from './components/Button';
+import Footer from './components/Footer'
+
 
 // syntax to import component
-// import Header from './components/Header';
+import Header from './components/Header';
+import OurClients from './components/OurClients';
+import ContactPage from './components/ContactPage';
+import TravelPage from './components/TravelPage';
+import AboutPage from './components/AboutPage';
 
 function App() {
   const [ asteroids, setAsteroids ] = useState({});
@@ -65,6 +73,16 @@ function App() {
         </Routes>
           
       </div>
+
+
+      <Routes>
+    
+        <Route path='/travel' element={<TravelPage />}/>
+        <Route path='/about' element={<AboutPage />}/>
+        <Route path='/contact' element={<ContactPage/>}/>
+        <Route path='/ourclients' element={<OurClients />}/>
+          
+      </Routes>
 
     </Router>
   );
