@@ -62,7 +62,6 @@ function App() {
 
   return (
     <Router>
-      <Gallery />
 
         <Routes>
           <Route path='/' element={<LandingPage />}/>
