@@ -16,7 +16,6 @@ import Footer from './components/Footer'
 import Header from './components/Header';
 import OurClients from './components/OurClients';
 import ContactPage from './components/ContactPage';
-import TravelPage from './components/TravelPage';
 import AboutPage from './components/AboutPage';
 
 function App() {
@@ -73,16 +72,6 @@ function App() {
         </Routes>
           
       </div>
-
-
-      <Routes>
-    
-        <Route path='/travel' element={<TravelPage />}/>
-        <Route path='/about' element={<AboutPage />}/>
-        <Route path='/contact' element={<ContactPage/>}/>
-        <Route path='/ourclients' element={<OurClients />}/>
-          
-      </Routes>
 
     </Router>
   );
