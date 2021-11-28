@@ -7,7 +7,6 @@ import axios from 'axios';
 
 // import components
 import LandingPage from './LandingPage';
-import TravelPage from './components/TravelPage';
 import Button from './components/Button';
 import Footer from './components/Footer'
 
@@ -18,6 +17,7 @@ import OurClients from './components/OurClients';
 import ContactPage from './components/ContactPage';
 import TravelPage from './components/TravelPage';
 import AboutPage from './components/AboutPage';
+import Gallery from './components/Gallery'
 
 function App() {
   const [ asteroids, setAsteroids ] = useState({});
@@ -37,32 +37,32 @@ function App() {
       .then((response) => {
         //                      with date = array that we will want  👇
         const asteroidResponse = response.data.near_earth_objects['2021-12-10'];
-        console.log(asteroidResponse)
+        // console.log(asteroidResponse)
         })
 
 
 
 
 
-      // api call: NASA Image and Video Library
-      axios({
-        //                                      👇 test nasa id
-        url: 'https://images-api.nasa.gov/asset/PIA01383',
-        method: 'GET',
-        responseType: 'json'
-      })
-        .then((response) => {
-          // gets image url for specified image (by nasa id)
-          const imagePath = response.data.collection.items[0].href;
-          console.log(imagePath, 'image path');
-        })
+      // // api call: NASA Image and Video Library
+      // axios({
+      //   //                                      👇 test nasa id
+      //   url: 'https://images-api.nasa.gov/asset/PIA01383',
+      //   method: 'GET',
+      //   responseType: 'json'
+      // })
+      //   .then((response) => {
+      //     // gets image url for specified image (by nasa id)
+      //     const imagePath = response.data.collection.items[0].href;
+      //     console.log(imagePath, 'image path');
+      //   })
   }, [])
 
 
 
   return (
     <Router>
-      <div className="">
+      <Gallery />
 
         <Routes>
           <Route path='/' element={<LandingPage />}/>
@@ -70,19 +70,8 @@ function App() {
           {/* <Route path='/about' element={<AboutPage />}/>
           <Route path='/contact' element={<ContactPage />}/>
           <Route path='/ourclients' element={<OurClients />}/> */}
+          <Route path="travel/:planetID" element={<Gallery />} />
         </Routes>
-          
-      </div>
-
-
-      <Routes>
-    
-        <Route path='/travel' element={<TravelPage />}/>
-        <Route path='/about' element={<AboutPage />}/>
-        <Route path='/contact' element={<ContactPage/>}/>
-        <Route path='/ourclients' element={<OurClients />}/>
-          
-      </Routes>
 
     </Router>
   );
