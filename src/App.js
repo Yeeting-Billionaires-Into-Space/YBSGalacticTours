@@ -7,7 +7,6 @@ import axios from 'axios';
 
 // import components
 import LandingPage from './LandingPage';
-import TravelPage from './components/TravelPage';
 import Button from './components/Button';
 import Footer from './components/Footer'
 
@@ -61,17 +60,18 @@ function App() {
 
   return (
     <Router>
-      <div className="">
+
+      <Header />
+
 
         <Routes>
           <Route path='/' element={<LandingPage />}/>
           <Route path='/travel/*' element={<TravelPage />}/>
-          {/* <Route path='/about' element={<AboutPage />}/>
+          <Route path='/about' element={<AboutPage />}/>
           <Route path='/contact' element={<ContactPage />}/>
-          <Route path='/ourclients' element={<OurClients />}/> */}
+          <Route path='/ourclients' element={<OurClients />}/>
         </Routes>
-          
-      </div>
+
 
     </Router>
   );
