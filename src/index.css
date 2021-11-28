@@ -12,9 +12,12 @@ html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}bo
 
 body {
   margin: 0;
-  background-image: url('././assets/purpleSpace.jpg');
-  
+  background-image: url('././assets/largeBackground.png');
+  background-repeat: no-repeat;
+  background-color: black;
+  background-position: center;
 }
+
 
 /* font stylings */
 html {
