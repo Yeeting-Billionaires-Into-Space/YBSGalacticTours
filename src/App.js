@@ -12,10 +12,12 @@ import Footer from './components/Footer'
 
 
 // syntax to import component
-import Header from './components/Header';
+// import Header from './components/Header';
 import OurClients from './components/OurClients';
 import ContactPage from './components/ContactPage';
 import AboutPage from './components/AboutPage';
+import TravelPage from './components/TravelPage';
+import SelectDates from './components/SelectDates';
 
 function App() {
   const [ asteroids, setAsteroids ] = useState({});
@@ -61,7 +63,7 @@ function App() {
   return (
     <Router>
 
-      <Header />
+      {/* <Header /> */}
 
 
         <Routes>
@@ -70,6 +72,7 @@ function App() {
           <Route path='/about' element={<AboutPage />}/>
           <Route path='/contact' element={<ContactPage />}/>
           <Route path='/ourclients' element={<OurClients />}/>
+          <Route path='/selectdates' element={<SelectDates />}/>
         </Routes>
 
 
