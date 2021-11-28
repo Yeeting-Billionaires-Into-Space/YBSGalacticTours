@@ -15,7 +15,6 @@ import Footer from './components/Footer'
 import Header from './components/Header';
 import OurClients from './components/OurClients';
 import ContactPage from './components/ContactPage';
-import TravelPage from './components/TravelPage';
 import AboutPage from './components/AboutPage';
 import Gallery from './components/Gallery'
 
@@ -63,14 +62,19 @@ function App() {
   return (
     <Router>
 
+
+
+
         <Routes>
           <Route path='/' element={<LandingPage />}/>
           <Route path='/travel/*' element={<TravelPage />}/>
-          {/* <Route path='/about' element={<AboutPage />}/>
+          <Route path='/about' element={<AboutPage />}/>
           <Route path='/contact' element={<ContactPage />}/>
+
           <Route path='/ourclients' element={<OurClients />}/> */}
           <Route path="travel/:planetID" element={<Gallery />} />
         </Routes>
+
 
     </Router>
   );
