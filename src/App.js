@@ -9,14 +9,14 @@ import axios from 'axios';
 import LandingPage from './LandingPage';
 import Button from './components/Button';
 import Footer from './components/Footer'
-
-
-// syntax to import component
 import Header from './components/Header';
 import OurClients from './components/OurClients';
 import ContactPage from './components/ContactPage';
 import AboutPage from './components/AboutPage';
-import Gallery from './components/Gallery'
+import Gallery from './components/Gallery';
+import TravelPage from './components/TravelPage';
+
+
 
 function App() {
   const [ asteroids, setAsteroids ] = useState({});
@@ -71,7 +71,7 @@ function App() {
           <Route path='/about' element={<AboutPage />}/>
           <Route path='/contact' element={<ContactPage />}/>
 
-          <Route path='/ourclients' element={<OurClients />}/> */}
+          <Route path='/ourclients' element={<OurClients />}/>
           <Route path="travel/:planetID" element={<Gallery />} />
         </Routes>
 
