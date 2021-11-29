@@ -1,15 +1,18 @@
 //Landing Page
-// import Button from './component/Button';
-import { Link } from 'react-router-dom'
-// import YBSLogo from './assets/YBSLogo.png'
+import './styles.css'
+import { Link } from 'react-router-dom';
+import Footer from '../components/Footer';
+
+
 
 function LandingPage () {
   return (
   <>
+  <section className='wrapper flex'>
     <img src='../.././assets/YBSLogo.png' alt='The logo for YBS Galactic Tours' />
-    <Link to={ '/Travel' }>
-      {/* <Button /> */}
-    </Link>
+    <Link to='travel' className='default'>Enter Space</Link>
+    <Footer />
+  </section>
   </>  
   )
 }

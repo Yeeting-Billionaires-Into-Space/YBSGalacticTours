@@ -1,5 +1,5 @@
 // SelectDates
-
+import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import PopulateDates from './PopulateDates';
 import ApiCall from './ApiCall';
@@ -11,7 +11,8 @@ function SelectDates({ planet }){
   const [ daySelected, setDaySelected ] = useState('01');
   const [ yearSelected, setYearSelected ] = useState('2022');
   const [ dateSelected, setDateSelected ] = useState('2022-01-01');
-
+  const [ buttonText, setButtonText ] = useState('Book Trip');
+  const [ buttonDisabled, setButtonDisabled ] = useState(false);
 
   // handle events for user selections of dropdowns
   const handleUserMonthSelect = (event) => {
@@ -38,16 +39,22 @@ function SelectDates({ planet }){
     console.log(`year:${yearSelected}  month:${monthSelected}  day:${daySelected}   date: ${date}  `)
   }
 
+  // on button click text will change and button is disabled
+  const handleButtonChange = () => {
+    setButtonText('Booked');
+    setButtonDisabled(true);
+  }
+
      
   return(
     <div>
-      <div className="title">
+      <div className='datesTitle'>
         <h1>{planet}</h1>
         <button>X</button>
       </div>
-      <div>
+      <div className='dates'>
         <h2>Plan your tour now!</h2>
-        <form action="submit" onSubmit={handleFormSubmit}>
+        <form action='submit' onSubmit={handleFormSubmit}>
           <fieldset>
             <legend>Use the drop down menu to select your launch date.</legend>
                 <label htmlFor='month'>Month:
@@ -67,24 +74,25 @@ function SelectDates({ planet }){
                 </select>
                 </label>
 
-                <label htmlFor="day">Day:</label>
-                <select name="day" id="day" onChange={handleDaySelected}>
+                <label htmlFor='day'>Day:</label>
+                <select name='day' id='day' onChange={handleDaySelected}>
                   <PopulateDates month={monthSelected} />
                 </select>
 
-                <label htmlFor="year">Year:</label>
-                <select name="year" id="year" onChange={handleYearSelected}>
-                  <option value="2022">2022</option>
-                  <option value="2023">2023</option>
-                  <option value="2024">2024</option>
+                <label htmlFor='year'>Year:</label>
+                <select name='year' id='year' onChange={handleYearSelected}>
+                  <option value='2022'>2022</option>
+                  <option value='2023'>2023</option>
+                  <option value='2024'>2024</option>
                 </select>
           </fieldset>
           <button className='default'>Check date</button>
         </form>
 
-        {/* API call */}
         <ApiCall date={dateSelected}/>
 
+        <button className='default' onClick={handleButtonChange} disabled={buttonDisabled} >{buttonText}</button>
+       
       </div>
     </div>
   )
