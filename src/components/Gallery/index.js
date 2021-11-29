@@ -34,9 +34,9 @@ function Gallery() {
         const saturnData = jsonData[2].collection.items;
 
         // taking only the items we want from the call
-        const marsArray = [marsData[49], marsData[79], marsData[87]];
-        const uranusArray = [uranusData[1], uranusData[4], uranusData[7], uranusData[21]];
-        const saturnArray = [saturnData[5], saturnData[7], saturnData[8], saturnData[20]];
+        const marsArray = [ marsData[49], marsData[79], marsData[87], marsData[94] ];
+        const uranusArray = [ uranusData[1], uranusData[4], uranusData[7], uranusData[21] ];
+        const saturnArray = [ saturnData[5], saturnData[7], saturnData[8], saturnData[20] ];
 
 
         // adding a planet property to each array to allow us to filter through them later
