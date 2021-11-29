@@ -9,13 +9,15 @@ import axios from 'axios';
 import LandingPage from './LandingPage';
 import Button from './components/Button';
 import Footer from './components/Footer'
-
-
-// syntax to import component
+import TravelPage from './components/TravelPage';
 import Header from './components/Header';
 import OurClients from './components/OurClients';
 import ContactPage from './components/ContactPage';
 import AboutPage from './components/AboutPage';
+import TourMars from './Screens/TourPages/TourMars';
+import TourSaturn from './Screens/TourPages/TourSaturn';
+import TourUranus from './Screens/TourPages/TourUranus';
+import PlanetComponents from './Screens/PlanetComponents';
 import Gallery from './components/Gallery'
 
 function App() {
@@ -47,14 +49,17 @@ function App() {
 
 
 
-
         <Routes>
           <Route path='/' element={<LandingPage />}/>
           <Route path='/travel/*' element={<TravelPage />}/>
           <Route path='/about' element={<AboutPage />}/>
           <Route path='/contact' element={<ContactPage />}/>
           <Route path='/ourclients' element={<OurClients />}/>
-          <Route path="/travel/:planetID" element={<Gallery />} />
+          <Route path='/travel/mars' element={<PlanetComponents header='Mars' children={<TourMars />} />}/>
+          <Route path='/travel/saturn' element={<PlanetComponents header='Saturn' children={<TourSaturn />} />} />
+          <Route path='/travel/uranus' element={<PlanetComponents header='Uranus' children={<TourUranus />} />} />
+          <Route path="/travel/:planetID/tour" element={<Gallery />} />
+
         </Routes>
 
 
