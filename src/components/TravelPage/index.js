@@ -1,5 +1,6 @@
 // TravelPage
 import { Link, Route, Routes } from "react-router-dom";
+import Header from "../Header";
 import Button from "../Button";
 
 import './styles.css'
@@ -9,6 +10,7 @@ import './styles.css'
 function TravelPage () {
   return (
   <>
+    <Header />
     <section className='wrapper'>
       <h1>Yeet Billionaires <span>Into Space</span></h1>
       <p>3 free virtual tours per day</p>

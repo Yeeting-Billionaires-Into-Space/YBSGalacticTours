@@ -92,11 +92,11 @@ function SelectDates({ planet }){
                     
                     // NOTE: This part below is not working. It is not mapping through the array or rendering anything 
 
-                    content.map((day) => {
-                      console.log(day);
+                    content.map((day, index) => {
+                      console.log(day[index]);
                       return(
                        
-                        <option value={day}>{day}</option>
+                        <option value={day[index]}>{day[index]}</option>
                    
                       )
                     })
