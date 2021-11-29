@@ -1,6 +1,7 @@
 // Gallery
-import Button from "../Button";
-import Header from "../Header";
+
+import Header from '../Header';
+import { Link } from 'react-router-dom'
 import { useParams } from "react-router";
 import GalleryContainer from "./GalleryContainer";
 import './styles.css';
@@ -18,10 +19,10 @@ function Gallery() {
                 <div>
                     <div className="planetBox">
                     <h1>{planetID}</h1>
-                    <Button intent="closeButton" />
+                    <Link to='/travel' className='closeButton'>X</Link>
                     </div>
                     <GalleryContainer />
-                    <Button text="See Dates" />
+                    <Link to={`/travel/${planetID}/dates`} className='default'>See Dates</Link>
                 </div>
             </section>
         </>

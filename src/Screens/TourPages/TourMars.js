@@ -1,7 +1,5 @@
 // TourMars
-import { Link, Route, Routes } from "react-router-dom";
-import PlanetComponents from "../PlanetComponents";
-import Button from "../../components/Button";
+import { Link } from "react-router-dom";
 import "./styles.css";
 
 function Mars() {
@@ -16,8 +14,8 @@ function Mars() {
             </p>
             <div className="imageBox"></div>
             <div className="buttonContainer">
-                <Button text="Gallery" />
-                <Button text="See Dates" />
+                <Link to='tour' className='default'>Gallery</Link>
+                <Link to='dates' className='default'>See Dates</Link>
             </div>
         </div>
         

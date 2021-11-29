@@ -5,6 +5,7 @@ import GalleryItem from './GalleryItem';
 
 
 function GalleryContainer() {
+  // setting states
   const [imgRefs, setImgRefs] = useState([]);
   const [filteredImgRefs, setFilteredImgRefs] = useState([]);
   const planetID = useParams();
@@ -26,12 +27,12 @@ function GalleryContainer() {
     // creating a promise to return all the api call results at once
     Promise.all(requests)
       .then((jsonData) => {
-
+        // sorting the jsonData returned from the api calls
         const marsData = jsonData[0].collection.items;
         const uranusData = jsonData[1].collection.items;
         const saturnData = jsonData[2].collection.items;
 
-        // taking only the items we want from the call
+        // saving only the items we want from the call
         const marsArray = [ marsData[49], marsData[79], marsData[87], marsData[94] ];
         const uranusArray = [ uranusData[1], uranusData[4], uranusData[7], uranusData[21] ];
         const saturnArray = [ saturnData[5], saturnData[7], saturnData[8], saturnData[20] ];
@@ -50,17 +51,18 @@ function GalleryContainer() {
           return { ...obj, planet: 'saturn' };
         });
 
+
         // combining all into one array
         const allWithPlanet = [...marsWithPlanet, ...uranusWithPlanet, ...saturnWithPlanet];
 
-        console.log(allWithPlanet)
+        // sets state of imgRefs
         setImgRefs(allWithPlanet);
       })
 
   }, [])
 
 
-
+  // filters the images
   const getImages = (nameOfPlanet) => {
     const copyOfImgRefs = [...imgRefs]
 
@@ -69,30 +71,29 @@ function GalleryContainer() {
       const imgFiltered = copyOfImgRefs.filter((eachImg) => {
         return eachImg.planet === nameOfPlanet;
       });
+      // sets the state of filteredImgRefs
       setFilteredImgRefs(imgFiltered)
     }
   }
 
 
-  // this is just to test if it will work, will not remain on final
-  const handleClick = () => {
-    getImages(planet)
-  }
+  // gets filtered images when filteredImgRefs has changed state
+useEffect(()=> {
+  getImages(planet)
+}, [filteredImgRefs])
 
 
   return (
-    <>
-        <button onClick={handleClick}>click</button>
-      <div className='gallery'>
-        {
-          filteredImgRefs.map(image => {
-            return (
-              <GalleryItem image={image} key={image.data[0].nasa_id} />
-            )
-          })
-        }
-      </div>
-      </>
+    <ul className='gallery'>
+      {
+        // for each image in the filteredImgRefs array, returns GalleryItem component
+      filteredImgRefs.map(image => {
+        return (
+          <GalleryItem image={image} key={image.data[0].nasa_id} />
+        )
+      })
+      }
+    </ul>
   )
 }
 
