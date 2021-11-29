@@ -3,6 +3,7 @@ import { Link, Route, Routes } from "react-router-dom";
 import PlanetComponents from "../PlanetComponents";
 import Button from "../../components/Button";
 import "./styles.css";
+import Gallery from "../../components/Gallery";
 
 function Mars() {
     return (
