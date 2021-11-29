@@ -11,27 +11,19 @@ import Button from './components/Button';
 import Footer from './components/Footer'
 
 
-<<<<<<< HEAD
-// syntax to import component
-// import Header from './components/Header';
-=======
 
 import Header from './components/Header';
->>>>>>> 5129331b5a04499ae19c86e92fa4db8968dbdae7
 import OurClients from './components/OurClients';
 import ContactPage from './components/ContactPage';
 import AboutPage from './components/AboutPage';
 import TravelPage from './components/TravelPage';
-<<<<<<< HEAD
 import SelectDates from './components/SelectDates';
-=======
 import TourMars from './Screens/TourPages/TourMars';
 import TourSaturn from './Screens/TourPages/TourSaturn';
 import TourUranus from './Screens/TourPages/TourUranus';
 import PlanetComponents from './Screens/PlanetComponents';
 import Gallery from './components/Gallery'
 
->>>>>>> 5129331b5a04499ae19c86e92fa4db8968dbdae7
 
 function App() {
   const [ asteroids, setAsteroids ] = useState({});
@@ -60,10 +52,6 @@ function App() {
   return (
     <Router>
 
-<<<<<<< HEAD
-      {/* <Header /> */}
-=======
->>>>>>> 5129331b5a04499ae19c86e92fa4db8968dbdae7
 
 
         <Routes>
@@ -72,16 +60,13 @@ function App() {
           <Route path='/about' element={<AboutPage />}/>
           <Route path='/contact' element={<ContactPage />}/>
           <Route path='/ourclients' element={<OurClients />}/>
-<<<<<<< HEAD
           <Route path='/selectdates' element={<SelectDates />}/>
-=======
           <Route path='/travel/mars' element={<PlanetComponents header='Mars' children={<TourMars />} />}/>
           <Route path='/travel/saturn' element={<PlanetComponents header='Saturn' children={<TourSaturn />} />} />
           <Route path='/travel/uranus' element={<PlanetComponents header='Uranus' children={<TourUranus />} />} />
           <Route path="/travel/:planetID/tour" element={<Gallery />} />
 
 
->>>>>>> 5129331b5a04499ae19c86e92fa4db8968dbdae7
         </Routes>
 
 

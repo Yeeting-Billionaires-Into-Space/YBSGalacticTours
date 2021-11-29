@@ -1,61 +1,29 @@
 // SelectDates
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+import PopulateDates from './PopulateDates';
 
 
 
 
 
 function SelectDates({ planet }){
-  // array of months with 30 days
-  const monthsWith30Days = ['09', '04', '06', '11'];
-  let content = [];
-  
-  // initialize state for month thats user selects from dropdown
-  const [ userMonthSelected, setUserMonthSelected] = useState('01');
-
-  const [days, setDays] = useState("");
-
-  // when state of month selected by user changes call getDates function
-  useEffect(() => {
-    getDates(userMonthSelected);
-  }, [userMonthSelected])
-
-  // when state of days changes, call populateDateSelected function
-  useEffect(() => {
-    populateDateSelect(days);
-    console.log("this state of days inside useEffect popultateDateSelected", days)
-  }, [days])
+  // initialize state for month that user selects from dropdown
+  const [ monthSelected, setMonthSelected] = useState('01');
+  const [ dateSelected, setDateSelected ] = useState('');
 
 
-  // handle event for user select of dropdown
+  // handle event for user selection of dropdown
   const handleUserMonthSelect = (event) => {
-    content = [];
     console.log(event.target.value)
-    setUserMonthSelected(event.target.value) 
+    setMonthSelected(event.target.value) 
   }
-  
-  // function takes month selected by user and determines number of days the day select should have
-  const getDates = (month) => {
-    console.log("this is month in getDates", month)
-    if ( month === '02'){
-      setDays(28);
-    }else if (monthsWith30Days.includes(month)){
-      setDays(30);
-    }else {
-      setDays(31);
-    }
-    console.log("number of days inside getDates state",days)
-  }
-    
 
-  // function populates an array with the number of days that will be used to populate teh day select
-  function populateDateSelect(numberOfDays) {
-    for (let index = 1; index < numberOfDays + 1; index ++){
-        content.push(index);
-      }
-      console.log(content)
+  const handleDateSelected = (event) => {
+    console.log(event.target.value)
+    setDateSelected(event.target.value);
   }
+
      
   return(
     <div>
@@ -86,24 +54,9 @@ function SelectDates({ planet }){
                 </label>
 
                 <label htmlFor="day">Day:</label>
-                <select name="day" id="day"  >
-                  <option value="0" disabled>Choose one</option>
-                  {
-                    
-                    // NOTE: This part below is not working. It is not mapping through the array or rendering anything 
-
-                    content.map((day, index) => {
-                      console.log(day[index]);
-                      return(
-                       
-                        <option value={day[index]}>{day[index]}</option>
-                   
-                      )
-                    })
-                  }
-                
+                <select name="day" id="day" onChange={handleDateSelected}>
+                  <PopulateDates month={monthSelected} />
                 </select>
-
           </fieldset>
         </form>
       </div>
