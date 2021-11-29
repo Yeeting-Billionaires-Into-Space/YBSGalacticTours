@@ -6,12 +6,10 @@
   margin: 0 auto;
 }
 
-
 .clientContainer{
   display: flex;
   flex-direction: column;
   max-width: 100%;
-  
 }
 
 .clientGallery{
@@ -19,9 +17,6 @@
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  
-  
-
 }
 
 .clientBox {
@@ -32,14 +27,13 @@
   background-size: cover;
   background-repeat: no-repeat;
   margin: 25px auto;
-
 }
 
 .client {
   border-radius: 100%;
   width: 35%;
   margin: 50px auto;
-  box-shadow: #105bd8 0px 0px 35px 20px;
+  box-shadow: #dd361c 0px 0px 35px 20px;
   transition: 0.5s;
 }
 
@@ -47,9 +41,6 @@
   transform: scale(120%);
   
 }
-
-
-
 
 .clientContainer h1, p {
   color: #ffffff;

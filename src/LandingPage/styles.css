@@ -1,22 +1,28 @@
 /* Landing Page Styles */
 
-section .default  {
-  padding: 3%;
-  margin-top: 50%;
-  font-size: 1.5rem;
-}
 
-.flex{
+.landingContainer {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 100%;
+  justify-content: space-evenly;
+  margin: 50% auto;
 }
 
-section footer{
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
+
+.landingLogo {
+  
+  min-width: 200px;
+  width: 65%;
 }
+
+section .default{
+  margin: 60% auto;
+}
+
+
+
+
+
+
 
 
