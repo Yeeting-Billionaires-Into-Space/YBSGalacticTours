@@ -20,4 +20,4 @@ function Uranus() {
   );
 }
 
-export default Uranus;
+export default Uranus; 
