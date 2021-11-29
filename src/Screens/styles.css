@@ -1,0 +1,29 @@
+/* stylesheet for Planet Component Page */
+.planetComponent {
+    background-color: #000012;
+    opacity: 90%;
+    border-radius: 7px;
+    margin: 10% auto;
+    padding: 5%;
+    width: 45%;
+}
+
+.planetBox {
+    display: flex;
+    justify-content: space-between;
+}
+
+.planetBox h1 {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.imageBox {
+    border: 1.5px solid white;
+    height: 250px;
+    width: 320px;
+    margin: 30px 0;
+}
+

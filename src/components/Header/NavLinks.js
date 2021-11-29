@@ -14,7 +14,7 @@ const NavLinks = (props) => {
             onClick={() => props.isHamburger && props.closeHamburgerMenu()}className='navContact'><Link to={'/contact'}>Contact</Link>
             </li>
             <li 
-            onClick={() => props.isHamburger && props.closeHamburgerMenu()}className='navClients'><Link to={'/ourclients'}>Our Clients</Link></li>
+            onClick={() => props.isHamburger && props.closeHamburgerMenu()}className='navClients'><Link to={'/ourclients'}>Clients</Link></li>
         </ul>
     )
 }
