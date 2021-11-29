@@ -33,3 +33,41 @@ h1, h2 {
 }
 
 
+/* link styling */
+
+.default {
+  color: #dd361c;
+  background-color: white;
+  font-family: 'montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 10px;
+  margin: 10px;
+}
+
+
+.default:hover,
+.default:focus {
+  color: white;
+  transform: scale(1.05);
+  background-color: #dd361c;
+  box-shadow: 1px 1px 30px 0px #9bcfff;
+}
+
+.closeButton {
+  color: white;
+  font-size: 2rem;
+  padding: 0px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.closeButton:hover,
+.closeButton:focus {
+  color: #dd361c;
+}
