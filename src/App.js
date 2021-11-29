@@ -15,8 +15,12 @@ import TourMars from './Screens/TourPages/TourMars';
 import TourSaturn from './Screens/TourPages/TourSaturn';
 import TourUranus from './Screens/TourPages/TourUranus';
 import PlanetComponents from './Screens/PlanetComponents';
+<<<<<<< HEAD
 import Gallery from './components/Gallery'
 // import SelectDates from './components/SelectDates'
+=======
+
+>>>>>>> f1f2fbe7054ae2327e8c02754197da4bf7681d94
 
 
 function App() {

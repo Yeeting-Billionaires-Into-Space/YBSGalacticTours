@@ -1,6 +1,7 @@
 // TourMars
 import { Link } from "react-router-dom";
 import "./styles.css";
+import Gallery from "../../components/Gallery";
 
 function Mars() {
     return (
