@@ -1,0 +1,12 @@
+/* stylesheet for MARS PAGE */
+p {
+    color: white;
+    font-family: 'Maitree', serif;
+    font-weight: 800;
+    font-size: 1rem;
+    width: 80%;
+}
+
+h1 {
+    font-size: 3rem;
+}

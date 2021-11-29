@@ -4,13 +4,10 @@
   max-width: 1028px;
   width: 90%;
   margin: 0 auto;
-  
 }
 
 
 .clientContainer{
- 
-  background-color: #000012;
   display: flex;
   flex-direction: column;
   max-width: 100%;
@@ -39,40 +36,48 @@
 }
 
 .client {
-  border: goldenrod 0px solid;
   border-radius: 100%;
   width: 35%;
   margin: 50px auto;
   box-shadow: #105bd8 0px 0px 35px 20px;
+  transition: 0.5s;
+}
+
+.client:hover {
+  transform: scale(120%);
   
 }
 
 
 
 
-
-h1, p {
+.clientContainer h1, p {
   color: #ffffff;
-  padding-left: 35px;
-  font-size: 3rem;
+  
+  
 }
 
-h1 {
-  font-size: 3rem;
+.clientContainer h1 {
+  padding-left: 90px;
+  margin: 75px 0;
 }
 
-h2 {
+.clientContainer h2 {
   color: #ffffff;
   text-transform: capitalize;
   font-size: 2.5rem;
   text-align: center;
 }
 
-p {
-  font-size: 1.2rem;
+.clientBox p {
   align-self: center;
-  width: 70%;
+  text-transform: none;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0), black, rgba(0, 0, 0, 0)
+  );
+}
 
+.client img{
+  object-fit: fill;
 }
 
 
