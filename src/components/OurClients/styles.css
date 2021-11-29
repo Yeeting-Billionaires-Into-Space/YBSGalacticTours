@@ -1,0 +1,84 @@
+/* Clients Styles */
+
+.wrapper {
+  max-width: 1028px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+
+.clientContainer{
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  
+}
+
+.clientGallery{
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  
+  
+
+}
+
+.clientBox {
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  background-image:radial-gradient(#00000015, rgba(0, 0, 0, 0.538)), url('../../assets/mars.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 25px auto;
+
+}
+
+.client {
+  border-radius: 100%;
+  width: 35%;
+  margin: 50px auto;
+  box-shadow: #105bd8 0px 0px 35px 20px;
+  transition: 0.5s;
+}
+
+.client:hover {
+  transform: scale(120%);
+  
+}
+
+
+
+
+.clientContainer h1, p {
+  color: #ffffff;
+  
+  
+}
+
+.clientContainer h1 {
+  padding-left: 90px;
+  margin: 75px 0;
+}
+
+.clientContainer h2 {
+  color: #ffffff;
+  text-transform: capitalize;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.clientBox p {
+  align-self: center;
+  text-transform: none;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0), black, rgba(0, 0, 0, 0)
+  );
+}
+
+.client img{
+  object-fit: fill;
+}
+
+
+
