@@ -9,19 +9,11 @@ import axios from 'axios';
 import LandingPage from './LandingPage';
 import Button from './components/Button';
 import Footer from './components/Footer'
-
-
-
 import Header from './components/Header';
 import OurClients from './components/OurClients';
 import ContactPage from './components/ContactPage';
 import AboutPage from './components/AboutPage';
-
-import Gallery from './components/Gallery';
 import TravelPage from './components/TravelPage';
-
-
-
 import TourMars from './Screens/TourPages/TourMars';
 import TourSaturn from './Screens/TourPages/TourSaturn';
 import TourUranus from './Screens/TourPages/TourUranus';
@@ -65,7 +57,7 @@ function App() {
           <Route path='/contact' element={<ContactPage />}/>
           <Route path='/ourclients' element={<OurClients />}/>
           <Route path='/travel/mars' element={<PlanetComponents header='Mars' children={<TourMars />} />}/>
-          <Route path='/travel/saturn' element={<PlanetComponents header='Saturn' children={<TourSaturn />} />} />
+          <Route path='/travel/saturn' element={<PlanetComponents hedaer='Saturn' children={<TourSaturn />} />} />
           <Route path='/travel/uranus' element={<PlanetComponents header='Uranus' children={<TourUranus />} />} />
           <Route path="/travel/:planetID/tour" element={<Gallery />} />
 

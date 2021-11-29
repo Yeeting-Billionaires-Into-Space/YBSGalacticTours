@@ -1,8 +1,11 @@
 import Button from "../components/Button";
 import Header from "../components/Header";
+import { useParams } from "react-router";
 import "./styles.css";
 
 function PlanetComponents({ header, children }) {
+
+
     return (
         <>
             <Header />
