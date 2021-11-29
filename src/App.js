@@ -2,17 +2,11 @@
 
 // imports NPM modules 
 import { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import axios from 'axios';
 
 // import components
 import LandingPage from './LandingPage';
-import Button from './components/Button';
-import Footer from './components/Footer'
-
-
-
-import Header from './components/Header';
 import OurClients from './components/OurClients';
 import ContactPage from './components/ContactPage';
 import AboutPage from './components/AboutPage';
@@ -21,7 +15,12 @@ import TourMars from './Screens/TourPages/TourMars';
 import TourSaturn from './Screens/TourPages/TourSaturn';
 import TourUranus from './Screens/TourPages/TourUranus';
 import PlanetComponents from './Screens/PlanetComponents';
+<<<<<<< HEAD
+import Gallery from './components/Gallery'
+// import SelectDates from './components/SelectDates'
+=======
 
+>>>>>>> f1f2fbe7054ae2327e8c02754197da4bf7681d94
 
 
 function App() {
@@ -55,7 +54,7 @@ function App() {
 
         <Routes>
           <Route path='/' element={<LandingPage />}/>
-          <Route path='/travel/*' element={<TravelPage />}/>
+          <Route path='/travel' element={<TravelPage />}/>
           <Route path='/about' element={<AboutPage />}/>
           <Route path='/contact' element={<ContactPage />}/>
           <Route path='/ourclients' element={<OurClients />}/>
@@ -63,6 +62,7 @@ function App() {
           <Route path='/travel/saturn' element={<PlanetComponents header='Saturn' children={<TourSaturn />} />} />
           <Route path='/travel/uranus' element={<PlanetComponents header='Uranus' children={<TourUranus />} />} />
           <Route path="/travel/:planetID/tour" element={<Gallery />} />
+          {/* <Route path='/travel/:planetName/dates' element={<SelectDates />} */}
 
 
         </Routes>
