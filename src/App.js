@@ -72,7 +72,7 @@ function App() {
           <Route path='/contact' element={<ContactPage />}/>
 
           <Route path='/ourclients' element={<OurClients />}/>
-          <Route path="travel/:planetID" element={<Gallery />} />
+          <Route path="/travel/:planetID" element={<Gallery />} />
         </Routes>
 
 

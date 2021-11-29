@@ -34,7 +34,7 @@ function Gallery() {
         const saturnData = jsonData[2].collection.items;
 
         // taking only the items we want from the call
-        const marsArray = [marsData[49], marsData[60], marsData[79], marsData[83]];
+        const marsArray = [marsData[49], marsData[79], marsData[87]];
         const uranusArray = [uranusData[1], uranusData[4], uranusData[7], uranusData[21]];
         const saturnArray = [saturnData[5], saturnData[7], saturnData[8], saturnData[20]];
 
@@ -62,11 +62,11 @@ function Gallery() {
   }, [])
 
 
+
   const getImages = (nameOfPlanet) => {
     const copyOfImgRefs = [...imgRefs]
 
     // conditional filtering
-
     if (nameOfPlanet) {
       const imgFiltered = copyOfImgRefs.filter((eachImg) => {
         return eachImg.planet === nameOfPlanet;
@@ -80,6 +80,10 @@ function Gallery() {
   const handleClick = () => {
     getImages(planet)
   }
+
+
+
+
   return (
     <>
       <button onClick={handleClick}>click</button>
