@@ -16,12 +16,7 @@ import Header from './components/Header';
 import OurClients from './components/OurClients';
 import ContactPage from './components/ContactPage';
 import AboutPage from './components/AboutPage';
-
-import Gallery from './components/Gallery';
 import TravelPage from './components/TravelPage';
-
-
-
 import TourMars from './Screens/TourPages/TourMars';
 import TourSaturn from './Screens/TourPages/TourSaturn';
 import TourUranus from './Screens/TourPages/TourUranus';
