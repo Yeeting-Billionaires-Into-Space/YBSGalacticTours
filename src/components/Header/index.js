@@ -11,7 +11,7 @@ function Header() {
   return (
     <header className='wrapper'>
       <div className='logo'>
-        <img src={'./assets/YBSLogo.png'} alt='the logo for YBS' />
+        <img src='../../assets/YBSLogo.png' alt='the logo for YBS' />
       </div>
       <nav>
         <MobileNavigation />

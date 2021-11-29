@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 function LandingPage () {
   return (
   <>
-    <img src='./YBSLogo.png' alt='The logo for YBS Galactic Tours' />
+    <img src='../.././assets/YBSLogo.png' alt='The logo for YBS Galactic Tours' />
     <Link to={ '/Travel' }>
       {/* <Button /> */}
     </Link>

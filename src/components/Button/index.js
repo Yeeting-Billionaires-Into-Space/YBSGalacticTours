@@ -1,9 +1,14 @@
 // Button
 import './styles.css'
 
-function Button ({onClick, text, type = 'button'}) {
+const styles = {
+    closeButton: 'closeButton'
+}
+
+function Button ({onClick, text, type = 'button', intent='default'}) {
+    const buttonText = intent === styles.closeButton ? "X" : text
     return (
-        <button type={type} className='button' onClick={onClick}>{text}</button>
+        <button type={type} className={intent} onClick={onClick} >{buttonText}</button>
     )
 }
 
