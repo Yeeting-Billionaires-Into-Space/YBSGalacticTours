@@ -22,4 +22,4 @@ function Mars() {
     );
 }
 
-export default Mars;
+export default Mars; 

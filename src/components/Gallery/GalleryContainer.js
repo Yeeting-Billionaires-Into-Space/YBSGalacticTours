@@ -97,4 +97,4 @@ useEffect(()=> {
   )
 }
 
-export default GalleryContainer;
+export default GalleryContainer; 
