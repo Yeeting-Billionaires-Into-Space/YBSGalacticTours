@@ -15,6 +15,12 @@ h1 {
   font-size: 3rem;
 }
 
+h3 {
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 p {
   padding-top: 0;
   padding-bottom: 30px;
