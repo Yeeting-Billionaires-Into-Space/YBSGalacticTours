@@ -26,7 +26,7 @@ import TourMars from './Screens/TourPages/TourMars';
 import TourSaturn from './Screens/TourPages/TourSaturn';
 import TourUranus from './Screens/TourPages/TourUranus';
 import PlanetComponents from './Screens/PlanetComponents';
-import Gallery from './components/Gallery'
+
 
 
 function App() {

@@ -5,6 +5,7 @@ const styles = {
     closeButton: 'closeButton'
 }
 
+
 function Button ({onClick, text, type = 'button', intent='default'}) {
     const buttonText = intent === styles.closeButton ? "X" : text
     return (
