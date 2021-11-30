@@ -8,6 +8,7 @@ import { useParams } from "react-router";
 import SelectDates from './index.js';
 import './styles.css';
 import '../../Screens/styles.css'
+import Footer from '../Footer';
 
 function DateComponent() {
 
@@ -27,6 +28,7 @@ function DateComponent() {
                   
                 </div>
             </section>
+            <Footer />
         </>
     );
 }
