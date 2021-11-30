@@ -1,0 +1,84 @@
+/* SELECT DATES STYLE */
+
+
+.planetComponent.dateComponent{
+  max-width: 730px;
+}
+.dateContainer {
+  max-width: 600px;
+}
+
+
+.dates {
+  color: #ffffff;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.datesForm form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.datesForm fieldset{
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.datesForm select {
+  
+  font-size: 1.2rem;
+  background-color: rgba(0, 0, 18, 90%);
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 7px;
+  margin-top: 20px;
+}
+
+.datesForm select:nth-of-type(2){
+  margin: 9px;
+}
+
+/* container for check date button and asteroid warning */
+.asteroidCheck {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  justify-items: center;
+  gap: 10px;
+}
+
+/* check date button */
+.datesForm .checkDate {
+  min-width: 150px;
+  margin: 20px auto;
+  min-height: 60px;
+}
+
+/* asteroid warning */
+.datesForm .warning {
+  min-width: 160px;
+  max-height: 64px;
+  background-color: #dd361c;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: .8rem;
+  margin-top: 18px;
+  padding: 7px 10px;
+}
+
+
+
+/* book trip button */
+.datesForm .book {
+  margin: 0 auto;
+  grid-column: span 2;
+}
+
+

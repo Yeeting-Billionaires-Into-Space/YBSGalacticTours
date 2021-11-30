@@ -10,9 +10,7 @@ import clientColinZevia from '../../assets/clientColinZevia.png';
 import { Link } from 'react-router-dom';
 
 // Nav components
-import Navigation from '../Header/Navigation';
 import MobileNavigation from '../Header/MobileNavigation';
-import NavLinks from '../Header/NavLinks'
 
 
 

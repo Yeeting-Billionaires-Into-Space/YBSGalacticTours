@@ -35,6 +35,8 @@ function GalleryContainer() {
         const uranusData = jsonData[1].collection.items;
         const saturnData = jsonData[2].collection.items;
 
+        
+
         // saving only the items we want from the call
         const marsArray = [ marsData[49], marsData[79], marsData[87], marsData[94] ];
         const uranusArray = [ uranusData[1], uranusData[4], uranusData[7], uranusData[21] ];

@@ -11,6 +11,8 @@ import OurClients from './components/OurClients';
 import ContactPage from './components/ContactPage';
 import AboutPage from './components/AboutPage';
 import TravelPage from './components/TravelPage';
+// import SelectDates from './components/SelectDates';
+import DateComponent from './components/SelectDates/DateComponent';
 import TourMars from './Screens/TourPages/TourMars';
 import TourSaturn from './Screens/TourPages/TourSaturn';
 import TourUranus from './Screens/TourPages/TourUranus';
@@ -20,26 +22,7 @@ import Gallery from './components/Gallery'
 
 
 function App() {
-  const [ asteroids, setAsteroids ] = useState({});
-
-  useEffect(() => {
-    // axios call: Asteroids NeoWs
-    axios({
-      // only likes to return one week at a time?
-      url:'https://api.nasa.gov/neo/rest/v1/feed',
-      method: 'GET',
-      responseType: 'json',
-      params:{
-        start_date: '2021-12-03',
-        api_key: 'X4WfjYooUbriBSQODcWwLkcOgGZuUlO2JrirMCZN'
-      }
-    })
-      .then((response) => {
-        //                      with date = array that we will want  👇
-        const asteroidResponse = response.data.near_earth_objects['2021-12-10'];
-        // console.log(asteroidResponse)
-        })
-  }, [])
+  
 
 
 
@@ -54,11 +37,12 @@ function App() {
           <Route path='/about' element={<AboutPage />}/>
           <Route path='/contact' element={<ContactPage />}/>
           <Route path='/ourclients' element={<OurClients />}/>
+          {/* <Route path='/selectdates' element={<SelectDates />}/> */}
           <Route path='/travel/mars' element={<PlanetComponents header='Mars' children={<TourMars />} />}/>
           <Route path='/travel/saturn' element={<PlanetComponents header='Saturn' children={<TourSaturn />} />} />
           <Route path='/travel/uranus' element={<PlanetComponents header='Uranus' children={<TourUranus />} />} />
           <Route path="/travel/:planetID/tour" element={<Gallery />} />
-          {/* <Route path='/travel/:planetName/dates' element={<SelectDates />} */}
+          <Route path='/travel/:planetName/dates' element={<DateComponent />}/>
 
 
         </Routes>
