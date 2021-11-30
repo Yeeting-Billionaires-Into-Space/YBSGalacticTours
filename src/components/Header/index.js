@@ -9,7 +9,7 @@ function Header() {
 
 
   return (
-    <header className='wrapper'>
+    <header>
       <div className='logo'>
         <img src='../../assets/YBSLogo.png' alt='the logo for YBS' />
       </div>

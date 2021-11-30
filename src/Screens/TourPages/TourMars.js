@@ -1,9 +1,13 @@
 // TourMars
 import { Link } from "react-router-dom";
 import "./styles.css";
-import Gallery from "../../components/Gallery";
+// import axios from "axios";
+// import {useState, useEffect} from 'react';
+
+
 
 function Mars() {
+    
     return (
         
         <div className="cardContainer">
