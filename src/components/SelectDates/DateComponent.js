@@ -17,8 +17,8 @@ function DateComponent() {
     return (
         <>
             <Header />
-            <section className="planetComponent">
-                <div>
+            <section className="planetComponent dateComponent">
+                <div className='dateContainer'>
                     <div className="planetBox">
                     <h1>{planetID}</h1>
                     <Link to='/travel' className='closeButton'>X</Link>

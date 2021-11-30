@@ -6,7 +6,8 @@ import axios from 'axios';
 function ApiCall({ date='2022-01-01' }) {
   const [ safe, setSafe ] = useState(false);
   const [ messageToDisplay, setMessageToDisplay ] = useState('');
- 
+  const [ buttonText, setButtonText ] = useState('Book Trip');
+  const [ buttonDisabled, setButtonDisabled ] = useState(false);
 
 
   const arrayOfAsteroids = [];
@@ -62,23 +63,37 @@ function ApiCall({ date='2022-01-01' }) {
 
   const getMessage = (safe) => {
     if (safe){
-      message =  `${date} is free from near earth objects. You are good to launch.`;
+      message =  `Asteroid free!`;
       
     }else {
-      message = `${date} is not safe to launch as there are near earth objects`;
+      message = `Incoming asteroids! Please select another date`;
       
     }  
     setMessageToDisplay(message);  
     console.log(message)
   }
     
+   // on button click text will change and button is disabled
+  const handleButtonChange = () => {
+    setButtonText('Booked!');
+    setButtonDisabled(true);
+  }
 
   return(
     <>
-    {
-      messageToDisplay
-    }
-  </>
+      {
+        messageToDisplay === 'Asteroid free!'
+        ? <button className='warning noAsteroids'>{messageToDisplay}</button> 
+        : <button className='warning yesAsteroids'>{messageToDisplay}</button> 
+      }
+      
+      {
+        safe
+        ? <button className='default book' onClick={handleButtonChange} disabled={buttonDisabled} >{buttonText}</button>
+        : null
+      }
+      
+    </>
   )
 }
 
