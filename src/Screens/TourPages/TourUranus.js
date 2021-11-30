@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import "./styles.css";
 
 function Uranus() {
+
+
   return (
     <div className="cardContainer">
       <p>
@@ -11,7 +13,9 @@ function Uranus() {
         Cupiditate, necessitatibus vero eius porro ullam quae minima
         aspernatur sapiente rerum?
       </p>
-      <div className="imageBox"></div>
+      <div className="imageBox"><img className="imgUranus" src="https://images-assets.nasa.gov/image/ARC-1986-AC86-7017/ARC-1986-AC86-7017~thumb.jpg" alt="uranus photograph from satellite flyby"
+      />
+      </div>
       <div className="buttonContainer">
         <Link to='tour' className='default'>Gallery</Link>
         <Link to='dates' className='default'>See Dates</Link>
