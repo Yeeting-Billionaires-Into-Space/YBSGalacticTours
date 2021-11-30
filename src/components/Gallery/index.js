@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import { useParams } from "react-router";
 import GalleryContainer from "./GalleryContainer";
 import Footer from '../Footer';
+import Loading from '../Loading';
 import './styles.css';
 import '../../Screens/styles.css'
 

@@ -1,0 +1,28 @@
+svg {
+  width: 3.75em;
+  animation: 1.5s spin ease infinite;
+}
+
+.loadingContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.ring {
+  fill: none;
+  stroke: #dd361c;
+  stroke-width: 2;
+}
+
+.ball {
+  fill: #fff;
+  stroke: none;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
