@@ -24,27 +24,31 @@ function OurClients() {
         <Header/>
         <MobileNavigation />
         <div className='clientContainer'>
-          <h1>Our Clients</h1>
+          <div className='textContainer'>
+            <h1>Testimonials</h1>
+            <p>Connect with our clients! Here at YBS we put the customer in the driver seat. From Earth to space we let you be number 1. See below to see reviews from a select amount of our clients. </p>
+            <Link to='saturn' className='default'>become a client </Link>
+          </div>
           <div className='clientGallery'>
             <div className='clientBox'> 
-              <h2>jeffrey Mezos</h2>
+              <h2>Kingpin</h2>
               <img className='client' src={clientBezos} alt='' />
-              <h3>tour: Mars</h3>
-              <p>"Namaste, it is I, Mr. Bezos; human rights activist and humble 'almost' trillionaire. Please don't forget that Amazon has free same-day delivery if you are an Amazon Prime member. Alexa, mic drop."</p>
+              <h3>Last Tour: Mars 11/05/21</h3>
+              <p>"It is I, Mr. Bezos; human rights activist and humble 'almost' trillionaire. Please don't forget that Amazon has free same-day delivery if you are an Amazon Prime member. Alexa, mic drop."</p>
             </div> 
             <div className='clientBox'> 
-              <h2>colin zevia</h2>
+              <h2>Lexluther</h2>
               <img className='client' src={clientColinZevia} alt='' />
-              <h3>tour: saturn</h3>
-              <p>"Ever since the age of 13, I have always dreamed of drinking a hot can of Zevia deep in the cold, empty, vacuous void that is outer space. Well, on December 3rd, 2021...there was zero hazardous N.E.O. around the earth, and that's when I made my dream come true! Everything was made possible only thanks to YBS Galactic Tours! Cheers." </p>
+              <h3>Last Tour: Saturn 08/20/21</h3>
+              <p>"Ever since the age of 13, I have always dreamed of drinking a hot can of Zevia deep in the cold, empty, vacuous void that is outer space." </p>
             </div> 
             <div className='clientBox'> 
               <h2>dr evil</h2>
               <img className='client' src={clientDrEvil} alt='' />
-              <h3>tour: uranus</h3>
+              <h3>Last Tour: Uranus 04/19/21</h3>
               <p>"... I'm freaking evil... What else is there to say."</p>
             </div> 
-            <Link to='saturn' className='default'>become a client </Link>
+            
           </div>
         </div>
       </section>  
