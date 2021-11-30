@@ -19,12 +19,18 @@ function Gallery() {
                 <div>
                     <div className="planetBox">
                     <h1>{planetID}</h1>
-                    <Link to='/travel' className='closeButton'>X</Link>
+                      <Link to='/travel' className='closeButton'>X</Link>
                     </div>
+                    {/* /planetBox */}
                     <GalleryContainer />
-                    <Link to={`/travel/${planetID}/dates`} className='default'>See Dates</Link>
+                    <div className="linkContainer">
+                      <Link to={`/travel/${planetID}/dates`} className='default'>See Dates</Link>
+                    </div>
+                    {/* /linkContainer */}
                 </div>
+                {/* anon div */}
             </section>
+            {/* /planetComponent */}
         </>
     );
 }
