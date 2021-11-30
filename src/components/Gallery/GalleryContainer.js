@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import GalleryItem from './GalleryItem';
+import Loading from '../Loading';
 
 
 function GalleryContainer() {
@@ -10,6 +11,7 @@ function GalleryContainer() {
   const [filteredImgRefs, setFilteredImgRefs] = useState([]);
   const planetID = useParams();
   const planet = planetID.planetID;
+  const [ isLoading, setIsLoading ] = useState(false);
 
 
   // api calls: Nasa Image and Video Library
@@ -18,6 +20,7 @@ function GalleryContainer() {
     const planets = ['mars', 'uranus', 'saturn'];
 
     const requests = planets.map((planet) => {
+      setIsLoading(true);
       return fetch(`https://images-api.nasa.gov/search?q=${planet}&media_type=image`)
         .then((response) => {
           return response.json();
@@ -59,6 +62,7 @@ function GalleryContainer() {
 
         // sets state of imgRefs
         setImgRefs(allWithPlanet);
+        setIsLoading(false);
       })
 
   }, [])
@@ -87,7 +91,9 @@ useEffect(()=> {
 
   return (
     <ul className='gallery'>
-      {
+      {isLoading ?
+      <Loading />
+      :
         // for each image in the filteredImgRefs array, returns GalleryItem component
       filteredImgRefs.map(image => {
         return (

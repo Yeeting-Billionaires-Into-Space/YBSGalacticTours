@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import ConvertDates from './ConvertDate';
+import Loading from '../Loading';
 
 function ApiCall({ date='2022-01-01' }) {
   // initialize state if date selected is free of asteroids
@@ -13,15 +14,17 @@ function ApiCall({ date='2022-01-01' }) {
   const [ buttonText, setButtonText ] = useState('Book Trip');
   // changes state to disable book trip button
   const [ buttonDisabled, setButtonDisabled ] = useState(false);
- 
+  // initialize state for loading
+  const [ isLoading, setIsLoading ] = useState(false);
+
 
   // inititalize variables
-  
   let message;
 
 
   useEffect(() => {
     // axios call: Asteroids NeoWs
+    setIsLoading(true)
     axios({
       // only likes to return one week at a time
       url:'https://api.nasa.gov/neo/rest/v1/feed',
@@ -35,7 +38,8 @@ function ApiCall({ date='2022-01-01' }) {
       .then((response) => {
           // save response 
           const asteroidResponse = response.data.near_earth_objects[date];
-
+          
+          setIsLoading(false)
           // filter out any true hazardous events and return the array
           const isItSafe = asteroidResponse.filter((asteroid) => {
             if(asteroid.is_potentially_hazardous_asteroid === true){
@@ -47,7 +51,7 @@ function ApiCall({ date='2022-01-01' }) {
 
           // determine if array contains any hazardous events and set state to safe or unsafe
           if (isItSafe.length > 0 ){
-            setSafe(false)           
+            setSafe(false)         
           }else {
             setSafe(true);
           }
@@ -69,9 +73,9 @@ function ApiCall({ date='2022-01-01' }) {
     }else {
       const dateToDisplay = ConvertDates(date)
       message = `Incoming asteroids on ${dateToDisplay}! Please select another date`;
-      
     }  
-    setMessageToDisplay(message);  
+    setMessageToDisplay(message);
+    
   }
     
    // on button click text will change and button is disabled
@@ -82,7 +86,9 @@ function ApiCall({ date='2022-01-01' }) {
 
   return(
     <>
-      {
+      {isLoading ?
+      <Loading />
+      :
         messageToDisplay === 'Asteroid free!'
         ? <button className='warning noAsteroids'>{messageToDisplay}</button> 
         : <button className='warning yesAsteroids'>{messageToDisplay}</button> 
