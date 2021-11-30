@@ -20,11 +20,15 @@
 }
 
 .imageBox {
-    border: 1.5px solid white;
-    height: 250px;
-    width: 320px;
+    width: 40%;
     margin: 30px;
+    padding-bottom: 25px;
 }
+.imageBox img {
+    width: 190px;
+}
+
+
 .buttonContainer {
     margin-left: 20px;
     margin-top: 10px;

@@ -11,7 +11,8 @@ function Saturn() {
         Cupiditate, necessitatibus vero eius porro ullam quae minima
         aspernatur sapiente rerum?
       </p>
-      <div className="imageBox"></div>
+      <div className="imageBox"><img className="imgSaturn" src="https://images-assets.nasa.gov/image/PIA12542/PIA12542~thumb.jpg" alt="closeup of the planet saturn"
+      /></div>
       <div className="buttonContainer">
         <Link to='tour' className='default'>Gallery</Link>
         <Link to='dates' className='default'>See Dates</Link>

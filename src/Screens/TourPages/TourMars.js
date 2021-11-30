@@ -17,7 +17,8 @@ function Mars() {
             Cupiditate, necessitatibus vero eius porro ullam quae minima
             aspernatur sapiente rerum?
             </p>
-            <div className="imageBox"></div>
+            <div className="imageBox"><img className="imgMars" src="https://images-assets.nasa.gov/image/PIA01120/PIA01120~thumb.jpg" alt="Mars rover selfie"
+            /></div>
             <div className="buttonContainer">
                 <Link to='tour' className='default'>Gallery</Link>
                 <Link to='dates' className='default'>See Dates</Link>
@@ -27,4 +28,4 @@ function Mars() {
     );
 }
 
-export default Mars; 
+export default Mars;
