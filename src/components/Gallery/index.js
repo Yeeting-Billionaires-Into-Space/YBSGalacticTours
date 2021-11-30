@@ -4,6 +4,7 @@ import Header from '../Header';
 import { Link } from 'react-router-dom'
 import { useParams } from "react-router";
 import GalleryContainer from "./GalleryContainer";
+import Footer from '../Footer';
 import './styles.css';
 import '../../Screens/styles.css'
 
@@ -23,14 +24,12 @@ function Gallery() {
                     </div>
                     {/* /planetBox */}
                     <GalleryContainer />
-                    <div className="linkContainer">
-                      <Link to={`/travel/${planetID}/dates`} className='default'>See Dates</Link>
-                    </div>
-                    {/* /linkContainer */}
+                    <Link to={`/travel/${planetID}/dates`} className='default'>See Dates</Link>
                 </div>
                 {/* anon div */}
             </section>
             {/* /planetComponent */}
+            <Footer />
         </>
     );
 }

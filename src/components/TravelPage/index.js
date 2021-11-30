@@ -2,6 +2,7 @@
 import { Link } from "react-router-dom";
 import Header from "../Header";
 import './styles.css'
+import Footer from '../Footer';
 
 
 
@@ -28,6 +29,7 @@ function TravelPage() {
           <Link to='saturn' className='default'>Virtual Tour</Link>
         </li>
       </ul>
+      <Footer />
     </>
 
   )
