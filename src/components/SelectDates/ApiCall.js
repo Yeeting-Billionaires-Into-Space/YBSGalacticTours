@@ -2,23 +2,28 @@
 
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import ConvertDates from './ConvertDate';
 
 function ApiCall({ date='2022-01-01' }) {
+  // initialize state if date selected is free of asteroids
   const [ safe, setSafe ] = useState(false);
+  // sets state of warning message
   const [ messageToDisplay, setMessageToDisplay ] = useState('');
+  // changes state on book trip button
   const [ buttonText, setButtonText ] = useState('Book Trip');
+  // changes state to disable book trip button
   const [ buttonDisabled, setButtonDisabled ] = useState(false);
+ 
 
-
-  const arrayOfAsteroids = [];
+  // inititalize variables
+  
   let message;
 
-  console.log(date)
 
   useEffect(() => {
     // axios call: Asteroids NeoWs
     axios({
-      // only likes to return one week at a time?
+      // only likes to return one week at a time
       url:'https://api.nasa.gov/neo/rest/v1/feed',
       method: 'GET',
       responseType: 'json',
@@ -28,49 +33,45 @@ function ApiCall({ date='2022-01-01' }) {
       }
     })
       .then((response) => {
-        console.log(response)
-       
-     
+          // save response 
           const asteroidResponse = response.data.near_earth_objects[date];
-          console.log(asteroidResponse)
 
-
-  
+          // filter out any true hazardous events and return the array
           const isItSafe = asteroidResponse.filter((asteroid) => {
             if(asteroid.is_potentially_hazardous_asteroid === true){
               return asteroid
+            }else {
+              return null
             }
           });
 
-
+          // determine if array contains any hazardous events and set state to safe or unsafe
           if (isItSafe.length > 0 ){
-            console.log('not safe')
             setSafe(false)           
           }else {
             setSafe(true);
-            console.log('safe')
           }
-          
-          console.log(isItSafe.length)
-          console.log("end of API call useeffect")
-        
         })
   }, [date])
 
+  // calls function to get message whenever state of safe changes
   useEffect(() => {
     getMessage(safe);
   }, [safe])
 
+  // sets state of message
   const getMessage = (safe) => {
+   
     if (safe){
-      message =  `Asteroid free!`;
+      const dateToDisplay = ConvertDates(date)
+      message = `${dateToDisplay} is asteroid free!`;
       
     }else {
-      message = `Incoming asteroids! Please select another date`;
+      const dateToDisplay = ConvertDates(date)
+      message = `Incoming asteroids on ${dateToDisplay}! Please select another date`;
       
     }  
     setMessageToDisplay(message);  
-    console.log(message)
   }
     
    // on button click text will change and button is disabled
@@ -92,7 +93,7 @@ function ApiCall({ date='2022-01-01' }) {
         ? <button className='default book' onClick={handleButtonChange} disabled={buttonDisabled} >{buttonText}</button>
         : null
       }
-      
+
     </>
   )
 }
