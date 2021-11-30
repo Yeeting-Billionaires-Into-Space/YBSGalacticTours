@@ -10,13 +10,13 @@ function Header() {
 
   return (
     <header>
-      <div className='logo'>
-        <img src='../../assets/YBSLogo.png' alt='the logo for YBS' />
-      </div>
-      <nav>
-        <MobileNavigation />
-        <Navigation />
-      </nav>
+        <div className='logo'>
+          <img src='../../assets/YBSLogo.png' alt='the logo for YBS' />
+        </div>
+        <nav>
+          <MobileNavigation />
+          <Navigation />
+        </nav>
     </header>
   )
 }
