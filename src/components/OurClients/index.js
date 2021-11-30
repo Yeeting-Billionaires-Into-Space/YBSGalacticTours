@@ -29,22 +29,28 @@ function OurClients() {
             </div>
             <div className='clientGallery'>
               <div className='clientBox'> 
-                <h2>Kingpin</h2>
                 <img className='client' src={clientBezos} alt='' />
+                <div className='clientText'>
+                <h2>Kingpin</h2>
                 <h3>Last Tour: Mars 11/05/21</h3>
                 <p>"It is I, Mr. Bezos; human rights activist and humble 'almost' trillionaire. Please don't forget that Amazon has free same-day delivery if you are an Amazon Prime member. Alexa, mic drop."</p>
+                </div>
               </div> 
               <div className='clientBox'> 
-                <h2>Lexluther</h2>
                 <img className='client' src={clientColinZevia} alt='' />
+                <div className='clientText'>
+                <h2>Lexluther</h2>
                 <h3>Last Tour: Saturn 08/20/21</h3>
                 <p>"Ever since the age of 13, I have always dreamed of drinking a hot can of Zevia deep in the cold, empty, vacuous void that is outer space." </p>
+                </div>
               </div> 
               <div className='clientBox'> 
-                <h2>dr evil</h2>
                 <img className='client' src={clientDrEvil} alt='' />
+                <div className='clientText'>
+                <h2>dr evil</h2>
                 <h3>Last Tour: Uranus 04/19/21</h3>
                 <p>"... I'm freaking evil... What else is there to say."</p>
+                </div>
               </div> 
               
             </div>
