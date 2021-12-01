@@ -1,0 +1,163 @@
+/* Contact Page Styles */
+
+
+/* Text Styles */
+.contactContainer h1 {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+}
+
+.contactContainer h2 {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.clientContainer h3 {
+  font-size: .8rem;
+  text-align: center;
+}
+
+.contactContainer p {
+  text-transform: none;
+}
+
+.clientBox p {
+  align-self: center;
+  text-transform: none;
+  font-size: 15px;
+}
+
+.clientBox h2 {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+}
+
+
+/* container styles */
+.contactContainer {
+  margin: 5% auto;
+  width: 100%;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  background-color:rgba(1, 4, 24, 0.95);
+  border-radius: 10px;
+  height: 720px;
+}
+
+.contactContainer h1 {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.contactContainer p{
+  margin-top: 1px;
+  width: 100%;
+}
+
+
+.contactSideCard {
+  flex: 1 1 500px ;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 255, 0.4);
+  height: 440px;
+  align-self: flex-start;
+  margin: 0 20px 10px 20px;
+}
+
+.contactFormContainer {
+  width: 100%;
+  height: 80%;
+  display: flex;
+}
+
+/* for screen reader on input areas */
+.hide {
+  position: absolute !important;
+  top: -9999px  !important;
+  left: -9999px !important;
+ }
+
+
+
+.contactFormContainer form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+  height:460px;
+  justify-content: flex-start;
+  align-content: space-evenly;
+}
+
+.form {
+  width: 100%;
+  border-radius: 5px;
+  border:none;
+  padding: 10px;
+  margin: 10px 20px 20px 0;
+}
+
+
+.formFirst {
+  flex: 1 0 100px;
+  border-radius: 5px;
+  border:none;
+  padding: 10px;
+  display: block;
+  margin-right: 20px;
+
+}
+
+.formLast {
+  flex: 2 0 100px;
+  border-radius: 5px;
+  border:none;
+  padding: 10px;
+  margin-right: 20px ;
+  
+}
+
+
+.textArea{
+  width: 100%;
+  resize: none;
+  border-radius: 5px;
+  border:none;
+  padding: 10px;
+  margin: 0 20px 0 0;
+}
+
+
+/* Button Styles */
+
+.contactFormContainer button {
+  color: #dd361c;
+  background-color: white;
+  font-family: 'montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 10px;
+  width: 220px
+  
+}
+
+
+.contactFormContainer button:hover,
+.contactFormContainer button:focus {
+  color: white;
+  transform: scale(1.02);
+  background-color: #dd361c;
+  box-shadow: 1px 1px 30px 0px #9bcfff;
+}
+
+
