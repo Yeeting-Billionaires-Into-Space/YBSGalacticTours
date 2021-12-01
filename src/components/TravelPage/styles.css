@@ -1,5 +1,7 @@
 /* Travel Page Styles */
-
+.disable {
+  pointer-events: none;
+}
 .wrapper {
   max-width: 1028px;
   width: 90%;
