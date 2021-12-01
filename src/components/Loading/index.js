@@ -1,4 +1,5 @@
 // Loading
+// loading icon by https://cssfx.netlify.app/
 import './styles.css'
 
 function Loading() {
@@ -13,4 +14,3 @@ function Loading() {
 }
 
 export default Loading;
-;
