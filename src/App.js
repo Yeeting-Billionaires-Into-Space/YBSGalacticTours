@@ -1,9 +1,7 @@
 // App.js
 
 // imports NPM modules 
-import { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import axios from 'axios';
 
 // import components
 import LandingPage from './LandingPage';

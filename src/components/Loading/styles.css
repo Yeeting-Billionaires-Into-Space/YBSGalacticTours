@@ -1,4 +1,6 @@
-svg {
+/* Loading */
+/* styles by https://cssfx.netlify.app/ */
+.loadingIcon {
   width: 3.75em;
   animation: 1.5s spin ease infinite;
 }
