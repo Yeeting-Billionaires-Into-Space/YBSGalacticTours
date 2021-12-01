@@ -13,26 +13,58 @@ function TravelPage() {
   // inititalize state for counter
   const [ counter, setCounter ] = useState(3);
   const [ disableTour, setDisableTour] = useState(false);
+  let tourCount = {} 
 
   useEffect(() => {
     // localStorage.clear()
-    if (!localStorage.getItem('tourCount')){
-      localStorage.setItem('tourCount', 3)
-      setCounter(localStorage.getItem('tourCount'))
+
+    if (!localStorage.getItem('tourCountKey')){
+
+      const now = new Date()
+      
+      // 86400000,
+      tourCount = {
+        value: 3,
+        expiry: now.getTime() + 60000,
+      }
+      localStorage.setItem('tourCountKey', JSON.stringify(tourCount))
+      setCounter(tourCount.value)
     } else {
-      setCounter(localStorage.getItem('tourCount'))
+      const newValue = JSON.parse(window.localStorage.getItem('tourCountKey'))
+      const newCounter = parseInt(newValue.value)
+      const expiryTime = parseInt(newValue.expiry)
+      const currentTime = new Date().getTime()
+      console.log(currentTime)
+      console.log(expiryTime)
+      if (currentTime >= expiryTime) {
+        localStorage.clear()
+        tourCount = {
+          value: 3,
+          expiry: currentTime + 60000,
+        }
+        localStorage.setItem('tourCountKey', JSON.stringify(tourCount))
+        setCounter(tourCount.value)
+        console.log(currentTime)
+      } else {
+        console.log(currentTime)
+        setCounter(newCounter)
+        // console.log(newCounter)
+        if (newCounter <= 0) {
+          setDisableTour(true)
+        }
+      }
     };
 
-    if (localStorage.getItem('tourCount') <= 0) {
-      setDisableTour(true)
-    }
+    
 
   }, [])
 
 
   const handleCounterClicks = () => {
       setCounter(counter - 1)
-      localStorage.setItem('tourCount', counter - 1)
+      tourCount.value = counter - 1
+      tourCount.expiry = new Date().getTime() + 60000
+      localStorage.setItem('tourCountKey', JSON.stringify(tourCount))
   };
 
 
