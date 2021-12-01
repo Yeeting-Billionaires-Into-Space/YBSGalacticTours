@@ -3,29 +3,31 @@
 import { useState, useEffect } from 'react'
 
 function PopulateDates ({ month }) {
- 
+
   const [days, setDays] = useState(null);
 
    // array of months with 30 days
   const monthsWith30Days = ['09', '04', '06', '11'];
   let content = [];
- 
+
 
   // when state of month selected by user changes call getDates function
   useEffect(() => {
-     if ( month === '02'){
+    if ( month === '02'){
       setDays(28);
     }else if (monthsWith30Days.includes(month)){
       setDays(30);
     }else {
       setDays(31);
     };
+    // eslint-disable-next-line
   }, [month])
 
   // MAY NOT NEED THIS USEEFFECT-------
   // when state of days changes, call populateDateSelected function
   useEffect(() => {
     populateDateSelect(days);
+    // eslint-disable-next-line
   }, [days])
     
 

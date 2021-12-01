@@ -23,8 +23,9 @@ function ApiCall({ date='2022-01-01' }) {
 
 
   useEffect(() => {
-    // axios call: Asteroids NeoWs
     setIsLoading(true)
+    
+    // axios call: Asteroids NeoWs
     axios({
       // only likes to return one week at a time
       url:'https://api.nasa.gov/neo/rest/v1/feed',
@@ -61,11 +62,12 @@ function ApiCall({ date='2022-01-01' }) {
   // calls function to get message whenever state of safe changes
   useEffect(() => {
     getMessage(safe);
+    // eslint-disable-next-line
   }, [safe])
 
   // sets state of message
   const getMessage = (safe) => {
-   
+
     if (safe){
       const dateToDisplay = ConvertDates(date)
       message = `${dateToDisplay} is asteroid free!`;

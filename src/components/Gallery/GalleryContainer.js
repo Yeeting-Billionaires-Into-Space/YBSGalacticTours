@@ -86,7 +86,8 @@ function GalleryContainer() {
   // gets filtered images when filteredImgRefs has changed state
 useEffect(()=> {
   getImages(planet)
-}, [imgRefs])
+  // eslint-disable-next-line
+}, [planet])
 
 
   return (
