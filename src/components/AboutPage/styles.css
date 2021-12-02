@@ -1,0 +1,44 @@
+.about {
+  margin: 0 auto;
+  margin-top: 20%;
+  padding: 20px 20px 50px 30px;
+}
+
+.about h1{
+  text-transform: uppercase;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  font-family: 'Montserrat', sans-serif;;
+}
+
+.about h2{
+  padding-left: 27px;
+  color:#dd361c;
+  margin: 20px 0;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.about p{
+  
+  font-family: 'Maitree', serif;
+  font-weight: 600;
+  text-transform: none;
+  font-size: 1.4rem;
+
+}
+
+.aboutFooter {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.about span{
+  display: block;
+  font-weight: 700;
+}
+
+
+
