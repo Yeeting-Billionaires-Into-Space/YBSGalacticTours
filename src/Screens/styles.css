@@ -5,6 +5,7 @@
     margin: 10% auto;
     padding: 5%;
     width: 45%;
+    max-width: 735px;
 }
 
 .planetBox {
@@ -17,6 +18,7 @@
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     text-transform: uppercase;
+    font-size: clamp(2rem, 9vw, 3rem);
 }
 
 .imageBox {
@@ -36,4 +38,39 @@
 
 .cardContainer p {
     text-transform: none;
+}
+
+@media (max-width: 985px) {
+    .planetComponent {
+        width: 80%;
+    }
+}
+
+@media (max-width: 560px) {
+    .buttonContainer {
+        display: flex;
+        flex-direction: column;
+    }
+    .buttonContainer a {
+    margin-left: 0px;
+    text-align: center;
+}
+}
+
+@media (max-width: 320px) {
+.planetComponent {
+    margin-left: 10px;
+}
+.planetComponent p,
+.planetBox h1 {
+    padding-left: 10px;
+}
+
+.imageBox {
+    margin-left: 10px;
+}
+.buttonContainer a {
+    margin-left: 0px;
+    text-align: center;
+}
 }

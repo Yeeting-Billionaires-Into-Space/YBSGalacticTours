@@ -5,8 +5,8 @@ import './styles.css';
 import Header from '../Header';
 import Footer from '../Footer';
 import clientDrEvil from '../../assets/clientDrEvil.jpeg';
-import clientBezos from '../../assets/clientBezos.webp';
-import clientColinZevia from '../../assets/clientColinZevia.png';
+import lexLuthor from '../../assets/lexLuthor.png';
+import kingPin from '../../assets/kingPin.png';
 import { Link } from 'react-router-dom';
 
 
@@ -19,31 +19,31 @@ function OurClients() {
         <div className="wrapper">
           <div className='clientContainer'>
             <div className='textContainer'>
-              <h1>Testimonials</h1>
+              <h1>Our Clients</h1>
               <p>Connect with our clients! Here at YBS we put the customer in the driver seat. From Earth to space we let you be number 1. See below to see reviews from a select amount of our clients. </p>
               <Link to='saturn' className='default'>become a client </Link>
             </div>
             <div className='clientGallery'>
               <div className='clientBox'> 
-                <img className='client' src={clientBezos} alt='' />
+                <img className='client' src={kingPin} alt='' />
                 <div className='clientText'>
-                <h2>Kingpin</h2>
+                <h2>Wilson Fisk</h2>
                 <h3>Last Tour: Mars 11/05/21</h3>
-                <p>"It is I, Mr. Bezos; human rights activist and humble 'almost' trillionaire. Please don't forget that Amazon has free same-day delivery if you are an Amazon Prime member. Alexa, mic drop."</p>
+                  <p>"Rage cannot stay inside. It needs to go somewhere or it becomes a poison. So I took my rage into space. "</p>
                 </div>
               </div> 
               <div className='clientBox'> 
-                <img className='client' src={clientColinZevia} alt='' />
+                <img className='client' src={lexLuthor} alt='' />
                 <div className='clientText'>
-                <h2>Lexluther</h2>
+                <h2>Lex luthor</h2>
                 <h3>Last Tour: Saturn 08/20/21</h3>
-                <p>"Ever since the age of 13, I have always dreamed of drinking a hot can of Zevia deep in the cold, empty, vacuous void that is outer space." </p>
+                  <p>"LEX LUTHOR! Possibly you’ve heard the name? The Greatest Criminal Mind on Earth! Ever since the age of 13, I have always dreamed of drinking a hot can of Zevia deep in the cold, empty, vacuous void that is outer space." </p>
                 </div>
               </div> 
               <div className='clientBox'> 
                 <img className='client' src={clientDrEvil} alt='' />
                 <div className='clientText'>
-                <h2>dr evil</h2>
+                <h2>Dr Evil</h2>
                 <h3>Last Tour: Uranus 04/19/21</h3>
                 <p>"... I'm freaking evil... What else is there to say."</p>
                 </div>
