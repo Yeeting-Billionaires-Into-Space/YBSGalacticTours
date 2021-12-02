@@ -26,8 +26,9 @@ function ApiCall({ date = '2022-01-01' }) {
 
 
   useEffect(() => {
-    // axios call: Asteroids NeoWs
     setIsLoading(true)
+    
+    // axios call: Asteroids NeoWs
     axios({
       // only likes to return one week at a time
       url:'https://api.nasa.gov/neo/rest/v1/feed',
@@ -64,7 +65,7 @@ function ApiCall({ date = '2022-01-01' }) {
         })
   }, [date])
 
- 
+
     
    // on button click text will change and button is disabled
   const handleButtonChange = () => {
