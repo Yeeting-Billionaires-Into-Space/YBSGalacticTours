@@ -17,9 +17,8 @@ import MobileNavigation from '../Header/MobileNavigation';
 function OurClients() {
   return (
     <>
+      <Header/>
       <section>
-          <Header/>
-          <MobileNavigation />
         <div className="wrapper">
           <div className='clientContainer'>
             <div className='textContainer'>

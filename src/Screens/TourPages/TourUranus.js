@@ -8,10 +8,7 @@ function Uranus() {
   return (
     <div className="cardContainer">
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
-        debitis soluta sit ut. Soluta quam dolorum earum quae eaque!
-        Cupiditate, necessitatibus vero eius porro ullam quae minima
-        aspernatur sapiente rerum?
+        Uranus is the seventh planet from the Sun. Its name is a reference to the Greek god of the sky, Uranus, who, according to Greek mythology, was the great-grandfather of Ares, grandfather of Zeus and father of Cronus. It has the third-largest planetary radius and fourth-largest planetary mass in the Solar System.
       </p>
       <div className="imageBox"><img className="imgUranus" src="https://images-assets.nasa.gov/image/ARC-1986-AC86-7017/ARC-1986-AC86-7017~thumb.jpg" alt="uranus photograph from satellite flyby"
       />
