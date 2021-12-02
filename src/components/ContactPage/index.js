@@ -4,16 +4,16 @@
 import './styles.css';
 import Header from '../Header';
 import Footer from '../Footer';
-import clientDrEvil from '../../assets/clientDrEvil.jpeg';
-import clientBezos from '../../assets/clientBezos.webp';
-import clientColinZevia from '../../assets/clientColinZevia.png';
-import { Link } from 'react-router-dom';
+// import clientDrEvil from '../../assets/clientDrEvil.jpeg';
+// import clientBezos from '../../assets/clientBezos.webp';
+// import clientColinZevia from '../../assets/clientColinZevia.png';
+// import { Link } from 'react-router-dom';
 
 // Nav components
 import MobileNavigation from '../Header/MobileNavigation';
 
 // React Icons Import
-import { FaEnvelope, FaFacebook, FaGithub, FaInstagram, FaTwitter } from "react-icons/fa"
+import { FaEnvelope, FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa"
 
 
 
