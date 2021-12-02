@@ -73,7 +73,6 @@ function GalleryContainer() {
 
   // gets filtered images when filteredImgRefs has changed state
 useEffect(()=> {
-
   const copyOfImgRefs = [...imgRefs]
 
   // conditional filtering

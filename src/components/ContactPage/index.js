@@ -6,8 +6,9 @@ import Header from '../Header';
 import Footer from '../Footer';
 import { Link } from 'react-router-dom';
 
+
 // React Icons Import
-import { FaEnvelope, FaFacebook, FaGithub, FaInstagram, FaTwitter } from "react-icons/fa"
+import { FaEnvelope, FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa"
 
 
 
