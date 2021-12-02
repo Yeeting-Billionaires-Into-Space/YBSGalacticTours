@@ -12,6 +12,10 @@ import { Link } from 'react-router-dom';
 // Nav components
 import MobileNavigation from '../Header/MobileNavigation';
 
+// React Icons Import
+import { FaEnvelope, FaFacebook, FaGithub, FaInstagram, FaTwitter } from "react-icons/fa"
+
+
 
 
 function ContactPage() {
@@ -26,7 +30,13 @@ function ContactPage() {
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit deserunt provident iusto quam dolorem rem, ut deleniti porro sapiente delectus.</p>
               <div className="contactFormContainer">
                 <aside className='contactSideCard'>
-                  <h2>media</h2>
+                  <h2>reach us</h2>
+                  <ul>
+                    <li><FaInstagram />YBSgalactic</li>
+                    <li><FaTwitter />YBSGT</li>
+                    <li><FaFacebook className='icon'/>YBSGalacticTours</li>
+                    <li><FaEnvelope />ybsgalactic@ybs.com</li>
+                  </ul>
                 </aside>
                   <form action="registerForm">
                     <label className="hide" htmlFor="firstName">First Name</label>
