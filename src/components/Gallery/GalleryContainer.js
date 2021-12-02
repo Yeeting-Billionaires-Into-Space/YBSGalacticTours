@@ -68,25 +68,23 @@ function GalleryContainer() {
   }, [])
 
 
-  // filters the images
-  const getImages = (nameOfPlanet) => {
-    const copyOfImgRefs = [...imgRefs]
-
-    // conditional filtering
-    if (nameOfPlanet) {
-      const imgFiltered = copyOfImgRefs.filter((eachImg) => {
-        return eachImg.planet === nameOfPlanet;
-      });
-      // sets the state of filteredImgRefs
-      setFilteredImgRefs(imgFiltered)
-    }
-  }
+  
 
 
   // gets filtered images when filteredImgRefs has changed state
 useEffect(()=> {
-  getImages(planet)
-}, [imgRefs])
+
+  const copyOfImgRefs = [...imgRefs]
+
+  // conditional filtering
+  if (planet) {
+    const imgFiltered = copyOfImgRefs.filter((eachImg) => {
+      return eachImg.planet === planet;
+    });
+    // sets the state of filteredImgRefs
+    setFilteredImgRefs(imgFiltered)
+  }
+}, [imgRefs, planet])
 
 
   return (

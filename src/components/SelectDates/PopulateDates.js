@@ -6,14 +6,16 @@ function PopulateDates ({ month }) {
  
   const [days, setDays] = useState(null);
 
-   // array of months with 30 days
-  const monthsWith30Days = ['09', '04', '06', '11'];
+  
   let content = [];
  
 
   // when state of month selected by user changes call getDates function
   useEffect(() => {
-     if ( month === '02'){
+    // array of months with 30 days
+    const monthsWith30Days = ['09', '04', '06', '11'];
+
+    if ( month === '02'){
       setDays(28);
     }else if (monthsWith30Days.includes(month)){
       setDays(30);
@@ -24,9 +26,9 @@ function PopulateDates ({ month }) {
 
   // MAY NOT NEED THIS USEEFFECT-------
   // when state of days changes, call populateDateSelected function
-  useEffect(() => {
-    populateDateSelect(days);
-  }, [days])
+  // useEffect(() => {
+  //   populateDateSelect(days);
+  // }, [days])
     
 
   // function populates an array with the number of days that will be used to populate the day select
