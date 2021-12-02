@@ -9,9 +9,6 @@ import clientBezos from '../../assets/clientBezos.webp';
 import clientColinZevia from '../../assets/clientColinZevia.png';
 import { Link } from 'react-router-dom';
 
-// Nav components
-import MobileNavigation from '../Header/MobileNavigation';
-
 
 
 function OurClients() {

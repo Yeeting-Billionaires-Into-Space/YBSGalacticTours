@@ -2,7 +2,6 @@
 import './styles.css'
 import Header from '../Header';
 import Footer from '../Footer';
-import MobileNavigation from '../Header/MobileNavigation';
 
 function AboutPage() {
   return (
