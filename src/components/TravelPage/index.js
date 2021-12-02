@@ -3,15 +3,14 @@ import { Link } from "react-router-dom";
 import Header from "../Header";
 import './styles.css'
 import Footer from '../Footer';
-import { useState } from "react/cjs/react.development";
-import { useEffect, useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 // import DisplayToursLeft from "./DisplayToursLeft";
 
 
 
 function TravelPage() {
   // inititalize state for counter
-  // const [counter, setCounter] = useState(3);
+  const [counter, setCounter] = useState(3);
   const [disableTour, setDisableTour] = useState(false);
   let tourCount = useRef({});
   
@@ -31,7 +30,7 @@ function TravelPage() {
 
 
       localStorage.setItem('tourCountKey', JSON.stringify(tourCount.current))
-      // setCounter(tourCount.current.value)
+      setCounter(tourCount.current.value)
     } else {
       const newValue = JSON.parse(window.localStorage.getItem('tourCountKey'))
       const newCounter = parseInt(newValue.value)
@@ -46,11 +45,11 @@ function TravelPage() {
           expiry: currentTime + 60000,
         }
         localStorage.setItem('tourCountKey', JSON.stringify(tourCount.current))
-        // setCounter(tourCount.current.value)
+        setCounter(tourCount.current.value)
         console.log(currentTime)
       } else {
         console.log(currentTime)
-        // setCounter(newCounter)
+        setCounter(newCounter)
         // console.log(newCounter)
         if (newCounter <= 0) {
           setDisableTour(true)
@@ -64,6 +63,7 @@ function TravelPage() {
 
 
   const handleCounterClicks = () => {
+    setCounter(counter - 1)
     tourCount.current.value = tourCount.current.value - 1
     tourCount.current.expiry = new Date().getTime() + 60000
     localStorage.setItem('tourCountKey', JSON.stringify(tourCount.current))
@@ -78,7 +78,7 @@ function TravelPage() {
         <h1>Yeeting Billionaires <span>Into Space</span></h1>
         <p className='tagLine'>Book a faster than light speed travel package from our upcoming line of space tours.</p>
         <p>3 free virtual tours per day</p>
-        <p className='toursLeft'>You have {tourCount.current.value} tours left today</p>
+        <p className='toursLeft'>You have {counter} tours left today</p>
       </section>
 
       <ul className='toursContainer wrapper'>
