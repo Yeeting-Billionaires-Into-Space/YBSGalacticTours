@@ -4,31 +4,34 @@ import Header from "../Header";
 import './styles.css'
 import Footer from '../Footer';
 import { useState } from "react/cjs/react.development";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 // import DisplayToursLeft from "./DisplayToursLeft";
 
 
 
 function TravelPage() {
   // inititalize state for counter
-  const [ counter, setCounter ] = useState(3);
-  const [ disableTour, setDisableTour] = useState(false);
-  let tourCount = {} 
+  const [counter, setCounter] = useState(3);
+  const [disableTour, setDisableTour] = useState(false);
+  let tourCount = useRef({});
+  
 
   useEffect(() => {
     // localStorage.clear()
 
-    if (!localStorage.getItem('tourCountKey')){
+    if (!localStorage.getItem('tourCountKey')) {
 
       const now = new Date()
-      
+
       // 86400000,
-      tourCount = {
+      tourCount.current = {
         value: 3,
         expiry: now.getTime() + 60000,
       }
-      localStorage.setItem('tourCountKey', JSON.stringify(tourCount))
-      setCounter(tourCount.value)
+
+
+      localStorage.setItem('tourCountKey', JSON.stringify(tourCount.current))
+      setCounter(tourCount.current.value)
     } else {
       const newValue = JSON.parse(window.localStorage.getItem('tourCountKey'))
       const newCounter = parseInt(newValue.value)
@@ -38,12 +41,12 @@ function TravelPage() {
       console.log(expiryTime)
       if (currentTime >= expiryTime) {
         localStorage.clear()
-        tourCount = {
+        tourCount.current = {
           value: 3,
           expiry: currentTime + 60000,
         }
-        localStorage.setItem('tourCountKey', JSON.stringify(tourCount))
-        setCounter(tourCount.value)
+        localStorage.setItem('tourCountKey', JSON.stringify(tourCount.current))
+        setCounter(tourCount.current.value)
         console.log(currentTime)
       } else {
         console.log(currentTime)
@@ -55,16 +58,16 @@ function TravelPage() {
       }
     };
 
-    
+
 
   }, [])
 
 
   const handleCounterClicks = () => {
-      setCounter(counter - 1)
-      tourCount.value = counter - 1
-      tourCount.expiry = new Date().getTime() + 60000
-      localStorage.setItem('tourCountKey', JSON.stringify(tourCount))
+    setCounter(counter - 1)
+    tourCount.current.value = counter - 1
+    tourCount.current.expiry = new Date().getTime() + 60000
+    localStorage.setItem('tourCountKey', JSON.stringify(tourCount.current))
   };
 
 
@@ -81,7 +84,7 @@ function TravelPage() {
 
       <ul className='toursContainer wrapper'>
         <li className='mars tour'>
-            <h2>mars</h2>
+          <h2>mars</h2>
           {!disableTour ? <Link to='mars' onClick={handleCounterClicks} className='default cardButton'>Virtual Tour</Link>
             : <Link to='mars' className='default cardButton disable'>Virtual Tour</Link>}
         </li>
