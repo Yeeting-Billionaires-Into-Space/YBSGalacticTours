@@ -17,15 +17,15 @@ function Gallery() {
         <>
             <Header />
             <section className="planetComponent">
-                <div>
+                <div className='gridMargin'>
                     <div className="planetBox">
-                    <h1>{planetID}</h1>
-                      <Link to='/travel' className='closeButton'>X</Link>
+                    <h1 className='planetID'>{planetID}</h1>
+                    <Link to='/travel' className='closeButton'>X</Link>
                     </div>
                     {/* /planetBox */}
                     <GalleryContainer />
-                    <Link to={`/travel/${planetID}/dates`} className='default'>See Dates</Link>
                 </div>
+                    <Link to={`/travel/${planetID}/dates`} className='default'>See Dates</Link>
                 {/* anon div */}
             </section>
             {/* /planetComponent */}

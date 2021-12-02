@@ -75,8 +75,8 @@ function TravelPage() {
       <section className='wrapper travelPage'>
         <h1>Yeeting Billionaires <span>Into Space</span></h1>
         <p className='tagLine'>Book a faster than light speed travel package from our upcoming line of space tours.</p>
-        <p>3 free virtual tours per day</p>
-        <p className='toursLeft'>You have {counter} tours left today</p>
+        <p className='tourAd'>3 free virtual tours per day</p>
+        <p className='toursLeft'>You have <span className="counterColor">{counter}</span> tours left today</p>
       </section>
 
       <ul className='toursContainer wrapper'>

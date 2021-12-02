@@ -34,7 +34,6 @@ nav a {
   color: white;
   text-transform: uppercase;
   border: 1px solid transparent;
-  border-top: none;
   transition: 0.4s ease-in-out;
 }
 
@@ -42,7 +41,6 @@ nav a:hover,
 nav a:focus {
   background-color: #105bd8;
   border: 1px solid white;
-  border-top: none;
 }
 
 nav ul {
@@ -60,6 +58,7 @@ nav ul {
 .mobileNav {
   display: none;
 }
+
 
 @media (max-width: 800px) {
   .logo {
@@ -103,10 +102,11 @@ nav ul {
     position: absolute;
     top: 10%;
     right: 0;
-    width: 30%;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.9);
+    width: 173px;
+    padding: 10px 10px 20px 10px;
+    background-color: rgba(1, 117, 226, 0.8);
     border-top: 2px solid rgb(255, 255, 255);
+    border-radius: 0 0 0 5px;
     z-index: 10;
   }
 
@@ -131,4 +131,11 @@ nav ul {
     border-bottom: 2px solid white;
     background-color: transparent;
   }
+}
+
+@media (max-width: 500px) {
+  .logo {
+    margin-top: 25%;
+  }
+  
 }

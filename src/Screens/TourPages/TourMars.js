@@ -12,10 +12,7 @@ function Mars() {
         
         <div className="cardContainer">
             <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
-            debitis soluta sit ut. Soluta quam dolorum earum quae eaque!
-            Cupiditate, necessitatibus vero eius porro ullam quae minima
-            aspernatur sapiente rerum?
+                Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System, being larger than only Mercury. In English, Mars carries the name of the Roman god of war and is often referred to as the "Red Planet".
             </p>
             <div className="imageBox"><img className="imgMars" src="https://images-assets.nasa.gov/image/PIA01120/PIA01120~thumb.jpg" alt="Mars rover selfie"
             /></div>

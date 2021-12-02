@@ -34,3 +34,6 @@
     margin-top: 10px;
 }
 
+.cardContainer p {
+    text-transform: none;
+}
