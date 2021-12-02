@@ -13,22 +13,17 @@ function SelectDates({ planet }){
   const [ dateSelected, setDateSelected ] = useState('2022-01-01');
 
 
-  
-
   // handle events for user selections of dropdowns
   const handleUserMonthSelect = (event) => {
-    console.log('month', event.target.value)
-    setMonthSelected(event.target.value) 
+    setMonthSelected(event.target.value); 
   }
 
   const handleDaySelected = (event) => {
-    console.log('day', event.target.value)
     setDaySelected(event.target.value);
   }
 
   const handleYearSelected = (event) => {
-    console.log('year', event.target.value)
-    setYearSelected(event.target.value)
+    setYearSelected(event.target.value);
   }
 
   // set state for date when user submits form
@@ -36,13 +31,9 @@ function SelectDates({ planet }){
     event.preventDefault();
     const date = `${yearSelected}-${monthSelected}-${daySelected}`;
     setDateSelected(date);
-
-    console.log(`year:${yearSelected}  month:${monthSelected}  day:${daySelected}   date: ${date}  `)
   }
 
  
-
-     
   return(
     <div className='dates'>
       <h2>Plan your tour now!</h2>
