@@ -4,13 +4,7 @@
 import './styles.css';
 import Header from '../Header';
 import Footer from '../Footer';
-import clientDrEvil from '../../assets/clientDrEvil.jpeg';
-import clientBezos from '../../assets/clientBezos.webp';
-import clientColinZevia from '../../assets/clientColinZevia.png';
 import { Link } from 'react-router-dom';
-
-// Nav components
-import MobileNavigation from '../Header/MobileNavigation';
 
 // React Icons Import
 import { FaEnvelope, FaFacebook, FaGithub, FaInstagram, FaTwitter } from "react-icons/fa"
@@ -21,21 +15,24 @@ import { FaEnvelope, FaFacebook, FaGithub, FaInstagram, FaTwitter } from "react-
 function ContactPage() {
   return (
     <>
+      <Header/>
       <section>
-          <Header/>
-          <MobileNavigation />
         <div className="wrapper">
           <div className='contactContainer'>
             <h1>contact us</h1> 
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit deserunt provident iusto quam dolorem rem, ut deleniti porro sapiente delectus.</p>
+            <p>Get in touch! Contact us for a free tour quote or to join our elite clientele. Fill out our form and our Team will get back to you within 24 hours. Your saftey is paramount.</p>
               <div className="contactFormContainer">
                 <aside className='contactSideCard'>
-                  <h2>reach us</h2>
+                  <div>
+                    <h2>reach us</h2>
+                    <p>51 Area Street, Roswell <span>3827927 Milky Way</span> </p>
+                    <p>(123) - 867 - 5309</p>
+                  </div>
                   <ul>
-                    <li><FaInstagram />YBSgalactic</li>
-                    <li><FaTwitter />YBSGT</li>
-                    <li><FaFacebook className='icon'/>YBSGalacticTours</li>
-                    <li><FaEnvelope />ybsgalactic@ybs.com</li>
+                    <li><FaInstagram className="icons"/>@YBSGT</li>
+                  <li><FaTwitter className="icons"/>@YBSGT</li>
+                    <li><FaFacebook className='icons'/>/YBSTours</li>
+                  <li><FaEnvelope className="icons"/>ybs@ybs.com</li>
                   </ul>
                 </aside>
                   <form action="registerForm">

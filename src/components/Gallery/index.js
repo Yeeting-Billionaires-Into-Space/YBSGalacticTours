@@ -25,7 +25,7 @@ function Gallery() {
                     {/* /planetBox */}
                     <GalleryContainer />
                 </div>
-                    <Link to={`/travel/${planetID}/dates`} className='default'>See Dates</Link>
+                    <Link to={`/travel/${planetID}/dates`} className='default galleryDateButton'>See Dates</Link>
                 {/* anon div */}
             </section>
             {/* /planetComponent */}

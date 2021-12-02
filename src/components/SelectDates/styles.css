@@ -11,11 +11,11 @@
 
 .dates {
   color: #ffffff;
-  width: 75%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
+  padding: 50px;
 }
 
 .datesForm form {
@@ -28,12 +28,13 @@
   border: none;
   margin: 0;
   padding: 0;
+  width: 348px;
 }
 
 .datesForm select {
   
   font-size: 1.2rem;
-  background-color: rgba(0, 0, 18, 90%);
+  background-color: rgba(7, 7, 39, 0.5);
   color: #ffffff;
   border-radius: 5px;
   padding: 7px;
@@ -49,16 +50,19 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
-  justify-items: center;
   gap: 10px;
+  margin-top: 25px;
 }
+
 
 /* check date button */
 .datesForm .checkDate {
   min-width: 150px;
-  margin: 20px auto;
+  margin: 0px;
   min-height: 60px;
 }
+
+
 
 /* asteroid warning */
 .datesForm .warning {
@@ -69,8 +73,7 @@
   border: none;
   border-radius: 10px;
   font-size: .8rem;
-  margin-top: 18px;
-  padding: 7px 10px;
+  padding: 13px;
 }
 
 
@@ -81,4 +84,36 @@
   grid-column: span 2;
 }
 
+@media (max-width: 600px) {
+  .asteroidCheck {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 510px) {
+  .datesForm select {
+    font-size: 1rem;
+  }
+  .dates {
+    padding: 50px 5px;
+    width: 100%;
+  }
+  .datesForm fieldset {
+    width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .datesForm legend {
+    margin-bottom: 20px;
+  }
+  .datesForm select {
+    width: 90%;
+    margin: 0;
+  }
+  .datesForm select:nth-of-type(2) {
+    margin: 0;
+  }
+}
 
