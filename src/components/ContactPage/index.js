@@ -4,11 +4,12 @@
 import './styles.css';
 import Header from '../Header';
 import Footer from '../Footer';
-import { useState } from 'react'
+import { useState } from 'react';
+
 
 
 // React Icons Import
-import { FaEnvelope, FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa"
+import { FaEnvelope, FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
 
 
 
@@ -51,7 +52,7 @@ function ContactPage() {
           <div className='contactContainer'>
             <h1>contact us</h1> 
             <p>Get in touch! Contact us for a free tour quote or to join our elite clientele. Fill out our form and our Team will get back to you within 24 hours. Your saftey is paramount.</p>
-              <div className="contactFormContainer">
+              <div className='contactFormContainer'>
                 <aside className='contactSideCard'>
                   <div>
                     <h2>reach us</h2>
@@ -59,12 +60,13 @@ function ContactPage() {
                     <p>(123) - 867 - 5309</p>
                   </div>
                   <ul>
-                    <li><FaInstagram className="icons"/>@YBSGT</li>
-                  <li><FaTwitter className="icons"/>@YBSGT</li>
-                    <li><FaFacebook className='icons'/>/YBSTours</li>
-                  <li><FaEnvelope className="icons"/>ybs@ybs.com</li>
+                    <li><FaInstagram className='icons' aria-label='instagram' />@YBSGT</li>
+                  <li><FaTwitter className='icons' aria-label='twitter' />@YBSGT</li>
+                    <li><FaFacebook className='icons' aria-label='facebook' />/YBSTours</li>
+                  <li><FaEnvelope className='icons' aria-label='email' />ybs@ybs.com</li>
                   </ul>
                 </aside>
+
                   <form action="registerForm" onSubmit={handleSubmit}>
                     <label className="hide" htmlFor="firstName">First Name</label>
                     <input 
@@ -74,15 +76,16 @@ function ContactPage() {
                       placeholder="First Name"
                       name="firstName"
                       required/>
-                      <label className="hide" htmlFor="lastName"> Last Name</label>
+                      <label className='hide' htmlFor='lastName'> Last Name</label>
                       <input 
+
                       onChange={handleLastNameInputChange}
                       value={userInput.lastName}
                       className="formLast"
                       placeholder="Last Name"
                       name="lastName"
                       required/>
-                    <label className="hide" htmlFor="email">Email</label>
+                    <label className='hide' htmlFor='email'>Email</label>
                       <input 
                       onChange={handleEmailInputChange}
                       value={userInput.email}
@@ -92,20 +95,20 @@ function ContactPage() {
                       name="email"
                       required/>
                     
-                    <label className="hide" htmlFor="message">  Message</label>
+                    <label className='hide' htmlFor='message'>  Message</label>
                     <textarea
                       onChange={handleMessageInputChange}
                       value={userInput.message}
                       rows={5}
                       maxLength={350}
                       
-                      className="textArea"
-                      placeholder="Message"
-                      name="message"
+                      className='textArea'
+                      placeholder='Message'
+                      name='message'
                       />
-                      <button 
-                      className="form" type="submit">Register</button>
+                      <button className='form default' type='submit'>Register</button>
                       {register ? <div className='registerSuccess'>Thank you for registering!</div> :null}
+
                   </form>
                 
               {/* end of form container */}

@@ -19,7 +19,6 @@ function AboutPage() {
       </div>
     </section>
     <Footer />
-    
   </>
   )
 }

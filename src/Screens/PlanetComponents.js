@@ -1,8 +1,8 @@
 // PlanetComponents
 import { Link } from 'react-router-dom';
-import Header from "../components/Header";
+import Header from '../components/Header';
 import Footer from '../components/Footer';
-import "./styles.css";
+import './styles.css';
 
 function PlanetComponents({ header, children }) {
 
@@ -10,11 +10,11 @@ function PlanetComponents({ header, children }) {
     return (
         <>
             <Header />
-            <section className="planetComponent">
+            <section className='planetComponent'>
                 <div>
-                    <div className="planetBox">
+                    <div className='planetBox'>
                     <h1>{header}</h1>
-                    <Link to='/travel' className='closeButton'>X</Link>
+                    <Link to='/travel' className='closeButton' aria-label='Click to close' >X</Link>
                     </div>
                     {children}
                 </div>

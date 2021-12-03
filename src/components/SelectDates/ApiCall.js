@@ -30,7 +30,6 @@ function ApiCall({ date = '2022-01-01' }) {
     
     // axios call: Asteroids NeoWs
     axios({
-      // only likes to return one week at a time
       url:'https://api.nasa.gov/neo/rest/v1/feed',
       method: 'GET',
       responseType: 'json',
@@ -73,6 +72,8 @@ function ApiCall({ date = '2022-01-01' }) {
     setButtonDisabled(true);
   }
 
+
+
   return(
     <>
       {isLoading ?
@@ -81,10 +82,14 @@ function ApiCall({ date = '2022-01-01' }) {
         safe
         ? 
         <>
+        <button className='default checkDate' disabled={buttonDisabled}>Check date</button>
         <button className='warning noAsteroids'>{convertedDate} is asteroid free!</button> 
         <button className='default book' onClick={handleButtonChange} disabled={buttonDisabled} >{buttonText}</button>
         </>
-        : <button className='warning yesAsteroids'>Incoming asteroids on {convertedDate}! Please select another date</button> 
+        : <>
+        <button className='default checkDate'>Check date</button>
+        <button className='warning yesAsteroids'>Incoming asteroids on {convertedDate}! Please select another date</button> 
+        </>
       }
       
 
