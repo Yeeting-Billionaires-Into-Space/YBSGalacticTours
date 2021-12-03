@@ -40,7 +40,7 @@ function TravelPage() {
         localStorage.clear()
         tourCount.current = {
           value: 3,
-          expiry: currentTime + 60000,
+          expiry: currentTime + 86400000,
         }
         localStorage.setItem('tourCountKey', JSON.stringify(tourCount.current))
         setCounter(tourCount.current.value)
@@ -60,7 +60,7 @@ function TravelPage() {
   const handleCounterClicks = () => {
     setCounter(counter - 1);
     tourCount.current.value = counter - 1
-    tourCount.current.expiry = new Date().getTime() + 60000
+    tourCount.current.expiry = new Date().getTime() + 86400000
     localStorage.setItem('tourCountKey', JSON.stringify(tourCount.current))
   };
 
