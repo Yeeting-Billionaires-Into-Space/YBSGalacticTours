@@ -70,7 +70,6 @@ function SelectDates({ planet }){
               </select>
         </fieldset>
         <div className='asteroidCheck'>
-          <button className='default checkDate'>Check date</button>
           <ApiCall date={dateSelected}/>
         </div>
       </form>
