@@ -55,7 +55,7 @@ function SelectDates({ planet }){
                 <option value='11'>November</option>
                 <option value='12'>December</option>
               </select>
-             
+
 
               <label htmlFor='day' className='srOnly'>Day:</label>
               <select name='day' id='day' onChange={handleDaySelected}>
@@ -69,7 +69,7 @@ function SelectDates({ planet }){
                 <option value='2024'>2024</option>
               </select>
         </fieldset>
-        <div className="asteroidCheck">
+        <div className='asteroidCheck'>
           <button className='default checkDate'>Check date</button>
           <ApiCall date={dateSelected}/>
         </div>

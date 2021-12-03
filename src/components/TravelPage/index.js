@@ -1,10 +1,9 @@
 // TravelPage
-import { Link } from "react-router-dom";
-import Header from "../Header";
+import { Link } from 'react-router-dom';
+import Header from '../Header';
 import './styles.css'
 import Footer from '../Footer';
-import { useEffect, useState, useRef } from "react";
-// import DisplayToursLeft from "./DisplayToursLeft";
+import { useEffect, useState, useRef } from 'react';
 
 
 
@@ -36,8 +35,7 @@ function TravelPage() {
       const newCounter = parseInt(newValue.value)
       const expiryTime = parseInt(newValue.expiry)
       const currentTime = new Date().getTime()
-      console.log(currentTime)
-      console.log(expiryTime)
+
       if (currentTime >= expiryTime) {
         localStorage.clear()
         tourCount.current = {
@@ -46,11 +44,8 @@ function TravelPage() {
         }
         localStorage.setItem('tourCountKey', JSON.stringify(tourCount.current))
         setCounter(tourCount.current.value)
-        console.log(currentTime)
       } else {
-        console.log(currentTime)
         setCounter(newCounter)
-        // console.log(newCounter)
         if (newCounter <= 0) {
           setDisableTour(true)
         }
@@ -78,7 +73,7 @@ function TravelPage() {
         <h1>Yeeting Billionaires <span>Into Space</span></h1>
         <p className='tagLine'>Book a faster than light speed travel package from our upcoming line of space tours.</p>
         <p className='tourAd'>3 free virtual tours per day</p>
-        <p className='toursLeft'>You have <span className="counterColor">{counter}</span> tours left today</p>
+        <p className='toursLeft'>You have <span className='counterColor'>{counter}</span> tours left today</p>
       </section>
 
       <ul className='toursContainer wrapper'>
