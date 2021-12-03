@@ -45,7 +45,7 @@ function OurClients() {
                 <div className='clientText'>
                 <h2>Dr Evil</h2>
                 <h3>Last Tour: Uranus 04/20/21</h3>
-                <p>""... I'm freaking evil... What else is there to say."</p>
+                <p>"... I'm freaking evil... What else is there to say."</p>
                 </div>
               </div> 
               
