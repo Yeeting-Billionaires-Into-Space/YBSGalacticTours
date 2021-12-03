@@ -22,7 +22,7 @@ function DateComponent() {
                 <div className='dateContainer'>
                     <div className='planetBox'>
                     <h1>{planetID}</h1>
-                    <Link to='/travel' className='closeButton'>X</Link>
+                    <Link to='/travel' className='closeButton' aria-label='Click to close'>X</Link>
                     </div>
                     <SelectDates />
                   

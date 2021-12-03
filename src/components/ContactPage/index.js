@@ -29,10 +29,10 @@ function ContactPage() {
                     <p>(123) - 867 - 5309</p>
                   </div>
                   <ul>
-                    <li><FaInstagram className='icons'/>@YBSGT</li>
-                  <li><FaTwitter className='icons'/>@YBSGT</li>
-                    <li><FaFacebook className='icons'/>/YBSTours</li>
-                  <li><FaEnvelope className='icons'/>ybs@ybs.com</li>
+                    <li><FaInstagram className='icons' aria-label='instagram' />@YBSGT</li>
+                  <li><FaTwitter className='icons' aria-label='twitter' />@YBSGT</li>
+                    <li><FaFacebook className='icons' aria-label='facebook' />/YBSTours</li>
+                  <li><FaEnvelope className='icons' aria-label='email' />ybs@ybs.com</li>
                   </ul>
                 </aside>
                   <form action='registerForm'>

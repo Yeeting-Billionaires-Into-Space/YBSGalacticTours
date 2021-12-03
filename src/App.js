@@ -28,6 +28,7 @@ function App() {
 
 
         <Routes>
+
           <Route path='/' element={<LandingPage />}/>
           <Route path='/travel' element={<TravelPage />}/>
           <Route path='/about' element={<AboutPage />}/>
@@ -38,8 +39,7 @@ function App() {
           <Route path='/travel/uranus' element={<PlanetComponents header='Uranus' children={<TourUranus />} />} />
           <Route path='/travel/:planetID/tour' element={<Gallery />} />
           <Route path='/travel/:planetName/dates' element={<DateComponent />}/>
-
-
+          
         </Routes>
 
 

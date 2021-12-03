@@ -21,10 +21,10 @@ function TravelPage() {
 
       const now = new Date()
 
-      // 86400000,
+
       tourCount.current = {
         value: 3,
-        expiry: now.getTime() + 60000,
+        expiry: now.getTime() + 86400000,
       }
 
 
