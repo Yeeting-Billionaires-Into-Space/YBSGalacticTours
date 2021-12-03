@@ -4,20 +4,51 @@
 import './styles.css';
 import Header from '../Header';
 import Footer from '../Footer';
+import { useState } from 'react';
+
 
 
 // React Icons Import
-import { FaEnvelope, FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa'
+import { FaEnvelope, FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
 
 
 
 
 function ContactPage() {
+  const [userInput, setUserInput] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    message: '',
+  });
+
+  const [register, setRegister] = useState(false);
+
+  const handleFirstNameInputChange = (event) => {
+    setUserInput({...userInput, firstName: event.target.value})
+  }
+  const handleLastNameInputChange = (event) => {
+    setUserInput({...userInput, lastName: event.target.value})
+  }
+  const handleEmailInputChange = (event) => {
+    setUserInput({...userInput, email: event.target.value})
+  }
+  const handleMessageInputChange = (event) => {
+    setUserInput({...userInput, message: event.target.value})
+  }
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setRegister(true);
+  }
+
+ 
+
   return (
     <>
       <Header/>
-      <section>
-        <div className='wrapper'>
+      <section className="contactUsSection">
+        <div className="wrapper">
           <div className='contactContainer'>
             <h1>contact us</h1> 
             <p>Get in touch! Contact us for a free tour quote or to join our elite clientele. Fill out our form and our Team will get back to you within 24 hours. Your saftey is paramount.</p>
@@ -35,29 +66,39 @@ function ContactPage() {
                   <li><FaEnvelope className='icons' aria-label='email' />ybs@ybs.com</li>
                   </ul>
                 </aside>
-                  <form action='registerForm'>
-                    <label className='hide' htmlFor='firstName'>First Name</label>
+
+                  <form action="registerForm" onSubmit={handleSubmit}>
+                    <label className="hide" htmlFor="firstName">First Name</label>
                     <input 
-                      className='formFirst'
-                      placeholder='First Name'
-                      name='firstName'
+                      onChange={handleFirstNameInputChange}
+                      value={userInput.firstName}
+                      className="formFirst"
+                      placeholder="First Name"
+                      name="firstName"
                       required/>
                       <label className='hide' htmlFor='lastName'> Last Name</label>
                       <input 
-                      className='formLast'
-                      placeholder='Last Name'
-                      name='lastName'
+
+                      onChange={handleLastNameInputChange}
+                      value={userInput.lastName}
+                      className="formLast"
+                      placeholder="Last Name"
+                      name="lastName"
                       required/>
                     <label className='hide' htmlFor='email'>Email</label>
                       <input 
-                      type='email'
-                      className='form'
-                      placeholder='Email'
-                      name='email'
+                      onChange={handleEmailInputChange}
+                      value={userInput.email}
+                      type="email"
+                      className="form"
+                      placeholder="Email"
+                      name="email"
                       required/>
                     
                     <label className='hide' htmlFor='message'>  Message</label>
                     <textarea
+                      onChange={handleMessageInputChange}
+                      value={userInput.message}
                       rows={5}
                       maxLength={350}
                       
@@ -65,8 +106,9 @@ function ContactPage() {
                       placeholder='Message'
                       name='message'
                       />
-                      <button 
-                      className='form default' type='submit'>Register</button>
+                      <button className='form default' type='submit'>Register</button>
+                      {register ? <div className='registerSuccess'>Thank you for registering!</div> :null}
+
                   </form>
                 
               {/* end of form container */}
@@ -76,7 +118,7 @@ function ContactPage() {
           {/* end of contactContainer */}
         </div>
         {/* end of wrapper  */}
-      </section>  
+      </section>
       <Footer />
     </>
   )
