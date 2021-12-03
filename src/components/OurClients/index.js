@@ -44,7 +44,7 @@ function OurClients() {
                 <img className='client' src={clientDrEvil} alt='Our client, Dr. Evil' />
                 <div className='clientText'>
                 <h2>Dr Evil</h2>
-                <h3>Last Tour: Uranus 04/19/21</h3>
+                <h3>Last Tour: Uranus 04/20/21</h3>
                 <p>'... I'm freaking evil... What else is there to say.'</p>
                 </div>
               </div> 
