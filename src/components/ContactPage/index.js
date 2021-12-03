@@ -4,7 +4,7 @@
 import './styles.css';
 import Header from '../Header';
 import Footer from '../Footer';
-import { Link } from 'react-router-dom';
+import { useState } from 'react'
 
 
 // React Icons Import
@@ -14,10 +14,39 @@ import { FaEnvelope, FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa"
 
 
 function ContactPage() {
+  const [userInput, setUserInput] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    message: '',
+  });
+
+  const [register, setRegister] = useState(false);
+
+  const handleFirstNameInputChange = (event) => {
+    setUserInput({...userInput, firstName: event.target.value})
+  }
+  const handleLastNameInputChange = (event) => {
+    setUserInput({...userInput, lastName: event.target.value})
+  }
+  const handleEmailInputChange = (event) => {
+    setUserInput({...userInput, email: event.target.value})
+  }
+  const handleMessageInputChange = (event) => {
+    setUserInput({...userInput, message: event.target.value})
+  }
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setRegister(true);
+  }
+
+ 
+
   return (
     <>
       <Header/>
-      <section>
+      <section className="contactUsSection">
         <div className="wrapper">
           <div className='contactContainer'>
             <h1>contact us</h1> 
@@ -36,21 +65,27 @@ function ContactPage() {
                   <li><FaEnvelope className="icons"/>ybs@ybs.com</li>
                   </ul>
                 </aside>
-                  <form action="registerForm">
+                  <form action="registerForm" onSubmit={handleSubmit}>
                     <label className="hide" htmlFor="firstName">First Name</label>
                     <input 
+                      onChange={handleFirstNameInputChange}
+                      value={userInput.firstName}
                       className="formFirst"
                       placeholder="First Name"
                       name="firstName"
                       required/>
                       <label className="hide" htmlFor="lastName"> Last Name</label>
                       <input 
+                      onChange={handleLastNameInputChange}
+                      value={userInput.lastName}
                       className="formLast"
                       placeholder="Last Name"
                       name="lastName"
                       required/>
                     <label className="hide" htmlFor="email">Email</label>
                       <input 
+                      onChange={handleEmailInputChange}
+                      value={userInput.email}
                       type="email"
                       className="form"
                       placeholder="Email"
@@ -59,6 +94,8 @@ function ContactPage() {
                     
                     <label className="hide" htmlFor="message">  Message</label>
                     <textarea
+                      onChange={handleMessageInputChange}
+                      value={userInput.message}
                       rows={5}
                       maxLength={350}
                       
@@ -68,6 +105,7 @@ function ContactPage() {
                       />
                       <button 
                       className="form" type="submit">Register</button>
+                      {register ? <div className='registerSuccess'>Thank you for registering!</div> :null}
                   </form>
                 
               {/* end of form container */}
@@ -77,7 +115,7 @@ function ContactPage() {
           {/* end of contactContainer */}
         </div>
         {/* end of wrapper  */}
-      </section>  
+      </section>
       <Footer />
     </>
   )
