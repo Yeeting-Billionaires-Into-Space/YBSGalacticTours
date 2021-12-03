@@ -14,7 +14,7 @@ function PlanetComponents({ header, children }) {
                 <div>
                     <div className='planetBox'>
                     <h1>{header}</h1>
-                    <Link to='/travel' className='closeButton'>X</Link>
+                    <Link to='/travel' className='closeButton' aria-label='Click to close' >X</Link>
                     </div>
                     {children}
                 </div>
