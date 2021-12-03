@@ -106,7 +106,7 @@ function ContactPage() {
                       placeholder='Message'
                       name='message'
                       />
-                      <button className='form default' type='submit'>Register</button>
+                      <button className='form' type='submit'>Register</button>
                       {register ? <div className='registerSuccess'>Thank you for registering!</div> :null}
 
                   </form>
