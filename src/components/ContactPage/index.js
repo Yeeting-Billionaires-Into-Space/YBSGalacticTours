@@ -4,7 +4,6 @@
 import './styles.css';
 import Header from '../Header';
 import Footer from '../Footer';
-import { Link } from 'react-router-dom';
 
 
 // React Icons Import

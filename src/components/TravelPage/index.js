@@ -8,7 +8,7 @@ import { useEffect, useState, useRef } from 'react';
 
 
 function TravelPage() {
-  // inititalize state for counter
+  // initialize state for counter
   const [counter, setCounter] = useState(3);
   const [disableTour, setDisableTour] = useState(false);
   let tourCount = useRef({});
