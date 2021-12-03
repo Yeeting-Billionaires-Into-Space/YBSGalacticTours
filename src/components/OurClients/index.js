@@ -29,7 +29,7 @@ function OurClients() {
                 <div className='clientText'>
                 <h2>Wilson Fisk</h2>
                 <h3>Last Tour: Mars 11/05/21</h3>
-                  <p>'Rage cannot stay inside. It needs to go somewhere or it becomes a poison. So I took my rage into space. '</p>
+                  <p>"Rage cannot stay inside. It needs to go somewhere or it becomes a poison. So I took my rage into space. "</p>
                 </div>
               </div> 
               <div className='clientBox'> 
@@ -37,15 +37,15 @@ function OurClients() {
                 <div className='clientText'>
                 <h2>Lex luthor</h2>
                 <h3>Last Tour: Saturn 08/20/21</h3>
-                  <p>'LEX LUTHOR! Possibly you’ve heard the name? The Greatest Criminal Mind on Earth! Ever since the age of 13, I have always dreamed of drinking a hot can of Zevia deep in the cold, empty, vacuous void that is outer space.' </p>
+                  <p>"LEX LUTHOR! Possibly you’ve heard the name? The Greatest Criminal Mind on Earth! Ever since the age of 13, I have always dreamed of drinking a hot can of Zevia deep in the cold, empty, vacuous void that is outer space." </p>
                 </div>
               </div> 
               <div className='clientBox'> 
                 <img className='client' src={clientDrEvil} alt='Our client, Dr. Evil' />
                 <div className='clientText'>
                 <h2>Dr Evil</h2>
-                <h3>Last Tour: Uranus 04/19/21</h3>
-                <p>'... I'm freaking evil... What else is there to say.'</p>
+                <h3>Last Tour: Uranus 04/20/21</h3>
+                <p>"... I'm freaking evil... What else is there to say."</p>
                 </div>
               </div> 
               
