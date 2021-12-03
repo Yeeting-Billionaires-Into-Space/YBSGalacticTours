@@ -61,6 +61,7 @@ function TravelPage() {
     setCounter(counter - 1);
     tourCount.current.value = counter - 1
     tourCount.current.expiry = new Date().getTime() + 300000
+
     localStorage.setItem('tourCountKey', JSON.stringify(tourCount.current))
   };
 
